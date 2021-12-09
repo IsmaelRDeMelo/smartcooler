@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Carga da base_machines"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{1E4B2750-5CE6-469B-A238-06797D042AAE}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{FCC743A4-C918-4857-8E9E-81D7681A4363}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -115,6 +115,42 @@
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
+      DTS:refId="Package\delete"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:Disabled="True"
+      DTS:DTSID="{E1E7DE04-A6A2-48AC-86A3-D036B12EFCB7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="delete"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{FCC1DEDC-44F1-4EA3-B734-257487929580}"
+          SQLTask:SqlStatementSource="DELETE FROM dbo.base_dados_machines&#xA;DELETE FROM dbo.tbAuxContagemGeladeirasAtivasPorDia" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\delete 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:Disabled="True"
+      DTS:DTSID="{06821566-ea2d-40fe-ab2b-5a0f49a137b4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="delete 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{20B7288E-BAA9-432E-A969-A2524E24489B}"
+          SQLTask:SqlStatementSource="DELETE FROM base_machines_atv&#xA;delete from fact_equipments" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Extração dos equipamentos ativos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
@@ -129,6 +165,81 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Extração dos equipamentos ativos\Coluna Derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Coluna Derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Cria novos valores de coluna aplicando expressões a colunas de entrada da transformação. Crie novas colunas ou substitua as existentes. Por exemplo, concatene os valores das colunas 'first name' e 'last name' para formar uma coluna 'full name'."
+              name="Coluna Derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Extração dos equipamentos ativos\Coluna Derivada.Inputs[Entrada de Coluna Derivada]"
+                  description="Entrada para a Transformação Coluna Derivada"
+                  name="Entrada de Coluna Derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extração dos equipamentos ativos\Coluna Derivada.Inputs[Entrada de Coluna Derivada].Columns[gdm_location]"
+                      cachedDataType="wstr"
+                      cachedLength="136"
+                      cachedName="gdm_location"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[gdm_location]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">[REPLACE](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[gdm_location]},"","Not Specified")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(gdm_location,"","Not Specified")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extração dos equipamentos ativos\Coluna Derivada.Outputs[Saída de Coluna Derivada]"
+                  description="Saída Padrão da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  name="Saída de Coluna Derivada"
+                  synchronousInputId="Package\Extração dos equipamentos ativos\Coluna Derivada.Inputs[Entrada de Coluna Derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extração dos equipamentos ativos\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada]"
+                  description="Saída de Erro da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Coluna Derivada"
+                  synchronousInputId="Package\Extração dos equipamentos ativos\Coluna Derivada.Inputs[Entrada de Coluna Derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extração dos equipamentos ativos\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extração dos equipamentos ativos\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extração dos equipamentos ativos\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extração dos equipamentos ativos\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Extração dos equipamentos ativos\Extração da base_dados_machines"
               componentClassID="Microsoft.OLEDBSource"
@@ -698,13 +809,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[gdm_canal]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[gdm_canal]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(gdm_canal,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(gdm_canal,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -722,13 +833,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[gdm_location]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[gdm_location]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(gdm_location,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(gdm_location,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -746,13 +857,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[machine_operator]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[machine_operator]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(machine_operator,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(machine_operator,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -770,13 +881,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[planograma]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[planograma]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(planograma,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(planograma,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -794,13 +905,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[machine_type]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[machine_type]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(machine_type,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(machine_type,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -818,13 +929,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[pricegroup]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[pricegroup]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(pricegroup,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(pricegroup,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -842,13 +953,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[address]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[address]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(address,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(address,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -866,13 +977,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[zipcode]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[zipcode]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(zipcode,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(zipcode,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -890,13 +1001,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[state]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[state]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(state,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(state,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -914,13 +1025,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[city]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[city]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(city,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(city,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -938,13 +1049,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[chip_number]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[chip_number]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(chip_number,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(chip_number,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -962,13 +1073,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[equipment_IMEI]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[equipment_IMEI]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(equipment_IMEI,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(equipment_IMEI,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -986,13 +1097,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},"Não Especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(desc_equip,"Não Especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(desc_equip,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -1082,6 +1193,30 @@
                       cachedLength="264"
                       cachedName="desc_equip"
                       lineageId="Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]" />
+                    <inputColumn
+                      refId="Package\Extração dos equipamentos ativos\Informações sobre Equipment.Inputs[Entrada de Coluna Derivada].Columns[gdm_location]"
+                      cachedDataType="wstr"
+                      cachedLength="136"
+                      cachedName="gdm_location"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[gdm_location]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">[REPLACE](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[gdm_location]},"casa petra","Casa Petra")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(gdm_location,"casa petra","Casa Petra")</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1108,13 +1243,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",1) == "Não Especificado" ? "Não possui" : [TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",1)</property>
+                          name="Expression">[TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",1) == "Not Specified" ? "Not Informed" : [TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",1)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">TOKEN(desc_equip,",",1) == "Não Especificado" ? "Não possui" : TOKEN(desc_equip,",",1)</property>
+                          name="FriendlyExpression">TOKEN(desc_equip,",",1) == "Not Specified" ? "Not Informed" : TOKEN(desc_equip,",",1)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1131,13 +1266,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",2) == "" ? "Não possui" : [TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",2)</property>
+                          name="Expression">[TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",2) == "" ? "Not Informed" : [TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",2)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">TOKEN(desc_equip,",",2) == "" ? "Não possui" : TOKEN(desc_equip,",",2)</property>
+                          name="FriendlyExpression">TOKEN(desc_equip,",",2) == "" ? "Not Informed" : TOKEN(desc_equip,",",2)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1154,13 +1289,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",3) == "" ? "Não possui" : [TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",3)</property>
+                          name="Expression">[TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",3) == "" ? "Not Informed" : [TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",3)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">TOKEN(desc_equip,",",3) == "" ? "Não possui" : TOKEN(desc_equip,",",3)</property>
+                          name="FriendlyExpression">TOKEN(desc_equip,",",3) == "" ? "Not Informed" : TOKEN(desc_equip,",",3)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1177,13 +1312,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",4) == "" ? "Não possui" : [TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",4)</property>
+                          name="Expression">[TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",4) == "" ? "Not Informed" : [TOKEN](#{Package\Extração dos equipamentos ativos\Extração da base_dados_machines.Outputs[Saída de Origem OLE DB].Columns[desc_equip]},",",4)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">TOKEN(desc_equip,",",4) == "" ? "Não possui" : TOKEN(desc_equip,",",4)</property>
+                          name="FriendlyExpression">TOKEN(desc_equip,",",4) == "" ? "Not Informed" : TOKEN(desc_equip,",",4)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2301,14 +2436,19 @@
               startId="Package\Extração dos equipamentos ativos\Separar por status de atividade.Outputs[Máquinas Ativadas]" />
             <path
               refId="Package\Extração dos equipamentos ativos.Paths[Saída de Coluna Derivada]"
-              endId="Package\Extração dos equipamentos ativos\Inserção na base_machines_activated.Inputs[UpsertDestinationInput]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Extração dos equipamentos ativos\Informações sobre Equipment.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Extração dos equipamentos ativos.Paths[Saída de Coluna Derivada1]"
               endId="Package\Extração dos equipamentos ativos\Informações sobre Equipment.Inputs[Entrada de Coluna Derivada]"
               name="Saída de Coluna Derivada"
               startId="Package\Extração dos equipamentos ativos\Informações Personalizadas.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Extração dos equipamentos ativos.Paths[Saída de Coluna Derivada1]"
+              endId="Package\Extração dos equipamentos ativos\Coluna Derivada.Inputs[Entrada de Coluna Derivada]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Extração dos equipamentos ativos\Informações sobre Equipment.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Extração dos equipamentos ativos.Paths[Saída de Coluna Derivada2]"
+              endId="Package\Extração dos equipamentos ativos\Inserção na base_machines_activated.Inputs[UpsertDestinationInput]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Extração dos equipamentos ativos\Coluna Derivada.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Extração dos equipamentos ativos.Paths[Saída de Origem OLE DB]"
               endId="Package\Extração dos equipamentos ativos\Separar por status de atividade.Inputs[Entrada de Divisão Condicional]"
@@ -2322,6 +2462,7 @@
       DTS:refId="Package\Fact_equipments"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
+      DTS:Disabled="True"
       DTS:DTSID="{6D1D8E31-ACE6-44FA-AABE-53A49C064BBC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -8448,7 +8589,25 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{64D13030-8250-4F3E-B567-D87CBB8A1C1F}"
-          SQLTask:SqlStatementSource="delete from base_dados_machines where (status = 'Ativada' and gdm like 'teste%')&#xA;&#xA;delete from base_machines_activated" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="delete from base_dados_machines where (status = 'Ativada' and gdm like 'teste%')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarefa Executar SQL 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:Disabled="True"
+      DTS:DTSID="{3C57EC3E-D3D2-447B-BDB1-BE9B5BAF7EA2}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarefa Executar SQL 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{20B7288E-BAA9-432E-A969-A2524E24489B}"
+          SQLTask:SqlStatementSource="delete from base_machines_atv" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -8472,11 +8631,11 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 2]"
       DTS:CreationName=""
-      DTS:DTSID="{9048087B-CE63-4D67-9DD7-0A8137935676}"
+      DTS:DTSID="{42C39D53-BAF7-48DA-9658-EA120F449BF4}"
       DTS:From="Package\Tarefa Executar SQL"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 2"
-      DTS:To="Package\Extração dos equipamentos ativos" />
+      DTS:To="Package\Tarefa Executar SQL 1" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 3]"
       DTS:CreationName=""
@@ -8493,6 +8652,30 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 4"
       DTS:To="Package\Fact_equipments" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{13D3AD71-52A7-402C-BA2E-8E0E2BFBAAA3}"
+      DTS:From="Package\delete"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 5"
+      DTS:To="Package\Selecionar todas as datas" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{818683B4-E244-4130-B8D3-6C40FF0DD6C4}"
+      DTS:From="Package\delete 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 6"
+      DTS:To="Package\delete" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{E9035806-C423-440A-9E11-32E5D2893690}"
+      DTS:From="Package\Tarefa Executar SQL 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 7"
+      DTS:To="Package\Extração dos equipamentos ativos" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
@@ -8505,11 +8688,27 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="108,42"
+          Id="Package\delete"
+          TopLeft="222,8" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\delete 1"
+          TopLeft="417,12" />
         <NodeLayout
           Size="240,42"
           Id="Package\Extração dos equipamentos ativos"
           TopLeft="206.527777777778,480.277777777778" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Fact_equipments"
+          TopLeft="247,674" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Geladeiras ativas por dia"
+          TopLeft="233,583" />
         <NodeLayout
           Size="210,42"
           Id="Package\Para cada data, faça\Inserção na base_machines"
@@ -8574,32 +8773,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 2]"
-          TopLeft="322.819444444444,425.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54.9444444444445"
-              Start="0,0"
-              End="0,47.4444444444445">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.4444444444445" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="195,42"
-          Id="Package\Geladeiras ativas por dia"
-          TopLeft="233,583" />
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 3]"
           TopLeft="328.513888888889,522.277777777778">
           <EdgeLayout.Curve>
@@ -8621,10 +8794,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Fact_equipments"
-          TopLeft="247,674" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 4]"
           TopLeft="328.5,625">
@@ -8639,6 +8808,134 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 5]"
+          TopLeft="276,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.5,36"
+              Start="0,0"
+              End="52.5,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="4,18" />
+                  <mssgle:LineSegment
+                    End="48.5,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48.5,18"
+                    Point2="52.5,18"
+                    Point3="52.5,22" />
+                  <mssgle:LineSegment
+                    End="52.5,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 6]"
+          TopLeft="417,31">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-87,0"
+              Start="0,0"
+              End="-79.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-79.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarefa Executar SQL 1"
+          TopLeft="435,412" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 2]"
+          TopLeft="407.111111111111,404.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27.888888888889,28.666666666667"
+              Start="0,0"
+              End="20.388888888889,28.666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="9.94444444444451,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9.94444444444451,0"
+                    Point2="13.9444444444445,0"
+                    Point3="13.9444444444445,4" />
+                  <mssgle:LineSegment
+                    End="13.9444444444445,24.666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.9444444444445,24.666666666667"
+                    Point2="13.9444444444445,28.666666666667"
+                    Point3="17.9444444444445,28.666666666667" />
+                  <mssgle:LineSegment
+                    End="20.388888888889,28.666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 7]"
+          TopLeft="527.5,454">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-200.972222222222,26.277777777778"
+              Start="0,0"
+              End="-200.972222222222,18.777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.138888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.138888888889"
+                    Point2="0,13.138888888889"
+                    Point3="-4,13.138888888889" />
+                  <mssgle:LineSegment
+                    End="-196.972222222222,13.138888888889" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-196.972222222222,13.138888888889"
+                    Point2="-200.972222222222,13.138888888889"
+                    Point3="-200.972222222222,17.138888888889" />
+                  <mssgle:LineSegment
+                    End="-200.972222222222,18.777777777778" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8698,30 +8995,8 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Extração dos equipamentos ativos.Paths[Saída de Coluna Derivada1]"
-          TopLeft="134.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Extração dos equipamentos ativos.Paths[Saída de Coluna Derivada]"
-          TopLeft="134.5,353.5">
+          TopLeft="134.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8765,11 +9040,438 @@
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Extração dos equipamentos ativos\Coluna Derivada"
+          TopLeft="309,360" />
+        <EdgeLayout
+          Id="Package\Extração dos equipamentos ativos.Paths[Saída de Coluna Derivada1]"
+          TopLeft="244.5,332.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64.5,48.5"
+              Start="0,0"
+              End="57,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="28.25,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.25,0"
+                    Point2="32.25,0"
+                    Point3="32.25,4" />
+                  <mssgle:LineSegment
+                    End="32.25,44.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.25,44.5"
+                    Point2="32.25,48.5"
+                    Point3="36.25,48.5" />
+                  <mssgle:LineSegment
+                    End="57,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extração dos equipamentos ativos.Paths[Saída de Coluna Derivada2]"
+          TopLeft="309,386.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-45.4999999999999,47.8333333333333"
+              Start="0,0"
+              End="-37.9999999999999,47.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-15.2018348623853,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15.2018348623853,0"
+                    Point2="-19.2018348623853,0"
+                    Point3="-19.2018348623853,4" />
+                  <mssgle:LineSegment
+                    End="-19.2018348623853,43.8333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.2018348623853,43.8333333333333"
+                    Point2="-19.2018348623853,47.8333333333333"
+                    Point3="-23.2018348623853,47.8333333333333" />
+                  <mssgle:LineSegment
+                    End="-37.9999999999999,47.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Extração dos equipamentos ativos\Extração da base_dados_machines">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Fact_equipments">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Fact_equipments\Contagem por dia"
+          TopLeft="340,80" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Fact_equipments\TF Fact Table Destination"
+          TopLeft="252,451" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Fact_equipments\Remover duplicados"
+          TopLeft="269,375" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Fact_equipments\Classificar por data"
+          TopLeft="150,172" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\Fact_equipments\Classificar"
+          TopLeft="349,174" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Fact_equipments\Junção de Mesclagem"
+          TopLeft="264,280" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Fact_equipments\Extração da base"
+          TopLeft="138,78" />
+        <EdgeLayout
+          Id="Package\Fact_equipments.Paths[Classificar Saída2]"
+          TopLeft="353.75,417">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,5.25,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_equipments.Paths[Classificar Saída1]"
+          TopLeft="412,216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-28,64"
+              Start="0,0"
+              End="-28,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.0653594771242" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.0653594771242"
+                    Point2="0,38.0653594771242"
+                    Point3="-4,38.0653594771242" />
+                  <mssgle:LineSegment
+                    End="-24,38.0653594771242" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24,38.0653594771242"
+                    Point2="-28,38.0653594771242"
+                    Point3="-28,42.0653594771242" />
+                  <mssgle:LineSegment
+                    End="-28,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_equipments.Paths[Classificar Saída]"
+          TopLeft="234,214">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="92,66"
+              Start="0,0"
+              End="92,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.2549019607843" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.2549019607843"
+                    Point2="0,39.2549019607843"
+                    Point3="4,39.2549019607843" />
+                  <mssgle:LineSegment
+                    End="88,39.2549019607843" />
+                  <mssgle:CubicBezierSegment
+                    Point1="88,39.2549019607843"
+                    Point2="92,39.2549019607843"
+                    Point3="92,43.2549019607843" />
+                  <mssgle:LineSegment
+                    End="92,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_equipments.Paths[Saída de Origem OLE DB1]"
+          TopLeft="421.5,122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.5,52"
+              Start="0,0"
+              End="-9.5,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22"
+                    Point2="0,26"
+                    Point3="-4,26" />
+                  <mssgle:LineSegment
+                    End="-5.5,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.5,26"
+                    Point2="-9.5,26"
+                    Point3="-9.5,30" />
+                  <mssgle:LineSegment
+                    End="-9.5,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_equipments.Paths[Saída de Origem OLE DB]"
+          TopLeft="218,120">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16,52"
+              Start="0,0"
+              End="16,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22"
+                    Point2="0,26"
+                    Point3="4,26" />
+                  <mssgle:LineSegment
+                    End="12,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12,26"
+                    Point2="16,26"
+                    Point3="16,30" />
+                  <mssgle:LineSegment
+                    End="16,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact_equipments.Paths[Saída da Junção de Mesclagem]"
+          TopLeft="355.5,322">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53"
+              Start="0,0"
+              End="0,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,14.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact_equipments\Contagem por dia">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact_equipments\Extração da base">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Geladeiras ativas por dia">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Geladeiras ativas por dia\Extração dos dados"
+          TopLeft="183,78" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\Geladeiras ativas por dia\Classificar"
+          TopLeft="207,229" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Geladeiras ativas por dia\Agregação"
+          TopLeft="208,158" />
+        <NodeLayout
+          Size="282,42"
+          Id="Package\Geladeiras ativas por dia\Upsert Destination (Insert, Update, Delete)"
+          TopLeft="135,320" />
+        <EdgeLayout
+          Id="Package\Geladeiras ativas por dia.Paths[Saída de Origem OLE DB]"
+          TopLeft="270.5,120">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Geladeiras ativas por dia.Paths[Saída de Agregação 1]"
+          TopLeft="271.25,200">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,2.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Geladeiras ativas por dia.Paths[Classificar Saída]"
+          TopLeft="273,271">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,12.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Geladeiras ativas por dia\Extração dos dados">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8847,355 +9549,6 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Para cada data, faça\Inserção na base_machines\Destino OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Geladeiras ativas por dia">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Geladeiras ativas por dia\Extração dos dados"
-          TopLeft="183,78" />
-        <NodeLayout
-          Size="129,42"
-          Id="Package\Geladeiras ativas por dia\Agregação"
-          TopLeft="208,158" />
-        <EdgeLayout
-          Id="Package\Geladeiras ativas por dia.Paths[Saída de Origem OLE DB]"
-          TopLeft="270.5,120">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="126,42"
-          Id="Package\Geladeiras ativas por dia\Classificar"
-          TopLeft="207,229" />
-        <EdgeLayout
-          Id="Package\Geladeiras ativas por dia.Paths[Saída de Agregação 1]"
-          TopLeft="271.25,200">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29"
-              Start="0,0"
-              End="0,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,2.75,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="282,42"
-          Id="Package\Geladeiras ativas por dia\Upsert Destination (Insert, Update, Delete)"
-          TopLeft="135,320" />
-        <EdgeLayout
-          Id="Package\Geladeiras ativas por dia.Paths[Classificar Saída]"
-          TopLeft="273,271">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49"
-              Start="0,0"
-              End="0,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,12.75,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Geladeiras ativas por dia\Extração dos dados">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Fact_equipments">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="160,42"
-          Id="Package\Fact_equipments\Extração da base"
-          TopLeft="138,78" />
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Fact_equipments\Classificar por data"
-          TopLeft="150,172" />
-        <EdgeLayout
-          Id="Package\Fact_equipments.Paths[Saída de Origem OLE DB]"
-          TopLeft="218,120">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="16,52"
-              Start="0,0"
-              End="16,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22"
-                    Point2="0,26"
-                    Point3="4,26" />
-                  <mssgle:LineSegment
-                    End="12,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="12,26"
-                    Point2="16,26"
-                    Point3="16,30" />
-                  <mssgle:LineSegment
-                    End="16,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Fact_equipments\Contagem por dia"
-          TopLeft="340,80" />
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Fact_equipments\Junção de Mesclagem"
-          TopLeft="264,280" />
-        <EdgeLayout
-          Id="Package\Fact_equipments.Paths[Classificar Saída]"
-          TopLeft="234,214">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="92,66"
-              Start="0,0"
-              End="92,58.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.2549019607843" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.2549019607843"
-                    Point2="0,39.2549019607843"
-                    Point3="4,39.2549019607843" />
-                  <mssgle:LineSegment
-                    End="88,39.2549019607843" />
-                  <mssgle:CubicBezierSegment
-                    Point1="88,39.2549019607843"
-                    Point2="92,39.2549019607843"
-                    Point3="92,43.2549019607843" />
-                  <mssgle:LineSegment
-                    End="92,58.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="126,42"
-          Id="Package\Fact_equipments\Classificar"
-          TopLeft="349,174" />
-        <EdgeLayout
-          Id="Package\Fact_equipments.Paths[Saída de Origem OLE DB1]"
-          TopLeft="421.5,122">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-9.5,52"
-              Start="0,0"
-              End="-9.5,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22"
-                    Point2="0,26"
-                    Point3="-4,26" />
-                  <mssgle:LineSegment
-                    End="-5.5,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5.5,26"
-                    Point2="-9.5,26"
-                    Point3="-9.5,30" />
-                  <mssgle:LineSegment
-                    End="-9.5,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fact_equipments.Paths[Classificar Saída1]"
-          TopLeft="412,216">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-28,64"
-              Start="0,0"
-              End="-28,56.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.0653594771242" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.0653594771242"
-                    Point2="0,38.0653594771242"
-                    Point3="-4,38.0653594771242" />
-                  <mssgle:LineSegment
-                    End="-24,38.0653594771242" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-24,38.0653594771242"
-                    Point2="-28,38.0653594771242"
-                    Point3="-28,42.0653594771242" />
-                  <mssgle:LineSegment
-                    End="-28,56.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Fact_equipments\Remover duplicados"
-          TopLeft="269,375" />
-        <EdgeLayout
-          Id="Package\Fact_equipments.Paths[Saída da Junção de Mesclagem]"
-          TopLeft="355.5,322">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53"
-              Start="0,0"
-              End="0,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="199,42"
-          Id="Package\Fact_equipments\TF Fact Table Destination"
-          TopLeft="252,451" />
-        <EdgeLayout
-          Id="Package\Fact_equipments.Paths[Classificar Saída2]"
-          TopLeft="353.75,417">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fact_equipments\Extração da base">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fact_equipments\Contagem por dia">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

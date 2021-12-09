@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Carga da base_sales"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{2ED82ECA-E978-4765-8C3D-863A3C873C23}">
+  DTS:VersionBuild="73"
+  DTS:VersionGUID="{3229F30C-786A-42F7-A663-88EDECB419F3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -96,7 +96,6 @@
       DTS:refId="Package\Carga da dim_products_test"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{2be775f0-6495-40cc-85ca-dc35dc446549}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -250,7 +249,7 @@
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].ExternalColumns[consum_type]"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].Columns[consum_type]"
                       name="consum_type"
                       truncationRowDisposition="FailComponent" />
@@ -260,7 +259,7 @@
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].ExternalColumns[is_returnable]"
-                      length="14"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].Columns[is_returnable]"
                       name="is_returnable"
                       truncationRowDisposition="FailComponent" />
@@ -270,7 +269,7 @@
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].ExternalColumns[is_zerosugar]"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].Columns[is_zerosugar]"
                       name="is_zerosugar"
                       truncationRowDisposition="FailComponent" />
@@ -280,7 +279,7 @@
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].ExternalColumns[category]"
-                      length="12"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].Columns[category]"
                       name="category"
                       truncationRowDisposition="FailComponent" />
@@ -326,22 +325,22 @@
                     <externalMetadataColumn
                       refId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].ExternalColumns[consum_type]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       name="consum_type" />
                     <externalMetadataColumn
                       refId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].ExternalColumns[is_returnable]"
                       dataType="wstr"
-                      length="14"
+                      length="50"
                       name="is_returnable" />
                     <externalMetadataColumn
                       refId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].ExternalColumns[is_zerosugar]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       name="is_zerosugar" />
                     <externalMetadataColumn
                       refId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].ExternalColumns[category]"
                       dataType="wstr"
-                      length="12"
+                      length="50"
                       name="category" />
                   </externalMetadataColumns>
                 </output>
@@ -397,25 +396,25 @@
                     <outputColumn
                       refId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Erro de Origem OLE DB].Columns[consum_type]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Erro de Origem OLE DB].Columns[consum_type]"
                       name="consum_type" />
                     <outputColumn
                       refId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Erro de Origem OLE DB].Columns[is_returnable]"
                       dataType="wstr"
-                      length="14"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Erro de Origem OLE DB].Columns[is_returnable]"
                       name="is_returnable" />
                     <outputColumn
                       refId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Erro de Origem OLE DB].Columns[is_zerosugar]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Erro de Origem OLE DB].Columns[is_zerosugar]"
                       name="is_zerosugar" />
                     <outputColumn
                       refId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Erro de Origem OLE DB].Columns[category]"
                       dataType="wstr"
-                      length="12"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Erro de Origem OLE DB].Columns[category]"
                       name="category" />
                     <outputColumn
@@ -593,7 +592,7 @@
                     <inputColumn
                       refId="Package\Carga da dim_products_test\Classificar 1.Inputs[Classificar Entrada].Columns[consum_type]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="50"
                       cachedName="consum_type"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].Columns[consum_type]">
                       <properties>
@@ -610,7 +609,7 @@
                     <inputColumn
                       refId="Package\Carga da dim_products_test\Classificar 1.Inputs[Classificar Entrada].Columns[is_returnable]"
                       cachedDataType="wstr"
-                      cachedLength="14"
+                      cachedLength="50"
                       cachedName="is_returnable"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].Columns[is_returnable]">
                       <properties>
@@ -627,7 +626,7 @@
                     <inputColumn
                       refId="Package\Carga da dim_products_test\Classificar 1.Inputs[Classificar Entrada].Columns[is_zerosugar]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="50"
                       cachedName="is_zerosugar"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].Columns[is_zerosugar]">
                       <properties>
@@ -644,7 +643,7 @@
                     <inputColumn
                       refId="Package\Carga da dim_products_test\Classificar 1.Inputs[Classificar Entrada].Columns[category]"
                       cachedDataType="wstr"
-                      cachedLength="12"
+                      cachedLength="50"
                       cachedName="category"
                       lineageId="Package\Carga da dim_products_test\Aquisição dos dados 1.Outputs[Saída de Origem OLE DB].Columns[category]">
                       <properties>
@@ -780,7 +779,7 @@
                     <outputColumn
                       refId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[consum_type]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[consum_type]"
                       name="consum_type">
                       <properties>
@@ -794,7 +793,7 @@
                     <outputColumn
                       refId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[is_returnable]"
                       dataType="wstr"
-                      length="14"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[is_returnable]"
                       name="is_returnable">
                       <properties>
@@ -808,7 +807,7 @@
                     <outputColumn
                       refId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[is_zerosugar]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[is_zerosugar]"
                       name="is_zerosugar">
                       <properties>
@@ -822,7 +821,7 @@
                     <outputColumn
                       refId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[category]"
                       dataType="wstr"
-                      length="12"
+                      length="50"
                       lineageId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[category]"
                       name="category">
                       <properties>
@@ -1025,7 +1024,7 @@
                     <inputColumn
                       refId="Package\Carga da dim_products_test\TF Fact Table Destination.Inputs[Fact Table Destination Input].Columns[consum_type]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="50"
                       cachedName="consum_type"
                       externalMetadataColumnId="Package\Carga da dim_products_test\TF Fact Table Destination.Inputs[Fact Table Destination Input].ExternalColumns[consum_type]"
                       lineageId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[consum_type]">
@@ -1047,7 +1046,7 @@
                     <inputColumn
                       refId="Package\Carga da dim_products_test\TF Fact Table Destination.Inputs[Fact Table Destination Input].Columns[is_returnable]"
                       cachedDataType="wstr"
-                      cachedLength="14"
+                      cachedLength="50"
                       cachedName="is_returnable"
                       externalMetadataColumnId="Package\Carga da dim_products_test\TF Fact Table Destination.Inputs[Fact Table Destination Input].ExternalColumns[is_returnable]"
                       lineageId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[is_returnable]">
@@ -1069,7 +1068,7 @@
                     <inputColumn
                       refId="Package\Carga da dim_products_test\TF Fact Table Destination.Inputs[Fact Table Destination Input].Columns[is_zerosugar]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="50"
                       cachedName="is_zerosugar"
                       externalMetadataColumnId="Package\Carga da dim_products_test\TF Fact Table Destination.Inputs[Fact Table Destination Input].ExternalColumns[is_zerosugar]"
                       lineageId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[is_zerosugar]">
@@ -1091,7 +1090,7 @@
                     <inputColumn
                       refId="Package\Carga da dim_products_test\TF Fact Table Destination.Inputs[Fact Table Destination Input].Columns[category]"
                       cachedDataType="wstr"
-                      cachedLength="12"
+                      cachedLength="50"
                       cachedName="category"
                       externalMetadataColumnId="Package\Carga da dim_products_test\TF Fact Table Destination.Inputs[Fact Table Destination Input].ExternalColumns[category]"
                       lineageId="Package\Carga da dim_products_test\Classificar 1.Outputs[Classificar Saída].Columns[category]">
@@ -1296,7 +1295,6 @@
       DTS:refId="Package\Carga de todos os dados na tabela de fato invoices test"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{d21d0c99-fa2d-45f4-844a-91b6e83a215e}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -3547,6 +3545,81 @@
               </outputs>
             </component>
             <component
+              refId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Coluna Derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Cria novos valores de coluna aplicando expressões a colunas de entrada da transformação. Crie novas colunas ou substitua as existentes. Por exemplo, concatene os valores das colunas 'first name' e 'last name' para formar uma coluna 'full name'."
+              name="Coluna Derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Inputs[Entrada de Coluna Derivada]"
+                  description="Entrada para a Transformação Coluna Derivada"
+                  name="Entrada de Coluna Derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Inputs[Entrada de Coluna Derivada].Columns[P_gdm_location]"
+                      cachedDataType="wstr"
+                      cachedLength="1020"
+                      cachedName="P_gdm_location"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Carga de todos os dados na tabela de fato invoices test\Aquisição dos dados.Outputs[Saída de Origem OLE DB].Columns[P_gdm_location]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">[REPLACE](#{Package\Carga de todos os dados na tabela de fato invoices test\Aquisição dos dados.Outputs[Saída de Origem OLE DB].Columns[P_gdm_location]},"casa petra","Casa Petra")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(P_gdm_location,"casa petra","Casa Petra")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Outputs[Saída de Coluna Derivada]"
+                  description="Saída Padrão da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  name="Saída de Coluna Derivada"
+                  synchronousInputId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Inputs[Entrada de Coluna Derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada]"
+                  description="Saída de Erro da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Coluna Derivada"
+                  synchronousInputId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Inputs[Entrada de Coluna Derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada 3"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Coluna Derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
@@ -3574,13 +3647,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">#{Package\Carga de todos os dados na tabela de fato invoices test\Aquisição dos dados.Outputs[Saída de Origem OLE DB].Columns[P_gdm_location]} == "" || [ISNULL](#{Package\Carga de todos os dados na tabela de fato invoices test\Aquisição dos dados.Outputs[Saída de Origem OLE DB].Columns[P_gdm_location]}) ==  TRUE  ? "Não especificado" : #{Package\Carga de todos os dados na tabela de fato invoices test\Aquisição dos dados.Outputs[Saída de Origem OLE DB].Columns[P_gdm_location]}</property>
+                          name="Expression">#{Package\Carga de todos os dados na tabela de fato invoices test\Aquisição dos dados.Outputs[Saída de Origem OLE DB].Columns[P_gdm_location]} == "" || [ISNULL](#{Package\Carga de todos os dados na tabela de fato invoices test\Aquisição dos dados.Outputs[Saída de Origem OLE DB].Columns[P_gdm_location]}) ==  TRUE  ? "Not Specified" : #{Package\Carga de todos os dados na tabela de fato invoices test\Aquisição dos dados.Outputs[Saída de Origem OLE DB].Columns[P_gdm_location]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">P_gdm_location == "" || ISNULL(P_gdm_location) ==  TRUE  ? "Não especificado" : P_gdm_location</property>
+                          name="FriendlyExpression">P_gdm_location == "" || ISNULL(P_gdm_location) ==  TRUE  ? "Not Specified" : P_gdm_location</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -5806,13 +5879,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Carga de todos os dados na tabela de fato invoices test\Aquisição dos dados.Outputs[Saída de Origem OLE DB].Columns[P_gdm_canal]},"Não especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Carga de todos os dados na tabela de fato invoices test\Aquisição dos dados.Outputs[Saída de Origem OLE DB].Columns[P_gdm_canal]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(P_gdm_canal,"Não especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(P_gdm_canal,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -6647,24 +6720,29 @@
               startId="Package\Carga de todos os dados na tabela de fato invoices test\Ordernar por order_id.Outputs[Classificar Saída]" />
             <path
               refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem2]"
-              endId="Package\Carga de todos os dados na tabela de fato invoices test\QtdProd inner (Bv inner sku).Inputs[Entrada Direita da Junção de Mesclagem]"
-              name="Saída da Junção de Mesclagem"
-              startId="Package\Carga de todos os dados na tabela de fato invoices test\Bv inner sku.Outputs[Saída da Junção de Mesclagem]" />
-            <path
-              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem3]"
-              endId="Package\Carga de todos os dados na tabela de fato invoices test\Tratamento dos valores de SKU.Inputs[Entrada de Coluna Derivada]"
-              name="Saída da Junção de Mesclagem"
-              startId="Package\Carga de todos os dados na tabela de fato invoices test\QtdProd inner (Bv inner sku).Outputs[Saída da Junção de Mesclagem]" />
-            <path
-              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem]"
               endId="Package\Carga de todos os dados na tabela de fato invoices test\Ordernar por order_id.Inputs[Classificar Entrada]"
               name="Saída da Junção de Mesclagem"
               startId="Package\Carga de todos os dados na tabela de fato invoices test\Volume uc inner (QtdProd inner (Bv inner sku)).Outputs[Saída da Junção de Mesclagem]" />
             <path
-              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem1]"
+              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem3]"
               endId="Package\Carga de todos os dados na tabela de fato invoices test\Bv inner sku.Inputs[Entrada Direita da Junção de Mesclagem]"
               name="Saída da Junção de Mesclagem"
               startId="Package\Carga de todos os dados na tabela de fato invoices test\Base inner Volume.Outputs[Saída da Junção de Mesclagem]" />
+            <path
+              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem]"
+              endId="Package\Carga de todos os dados na tabela de fato invoices test\QtdProd inner (Bv inner sku).Inputs[Entrada Direita da Junção de Mesclagem]"
+              name="Saída da Junção de Mesclagem"
+              startId="Package\Carga de todos os dados na tabela de fato invoices test\Bv inner sku.Outputs[Saída da Junção de Mesclagem]" />
+            <path
+              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem1]"
+              endId="Package\Carga de todos os dados na tabela de fato invoices test\Tratamento dos valores de SKU.Inputs[Entrada de Coluna Derivada]"
+              name="Saída da Junção de Mesclagem"
+              startId="Package\Carga de todos os dados na tabela de fato invoices test\QtdProd inner (Bv inner sku).Outputs[Saída da Junção de Mesclagem]" />
+            <path
+              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Coluna Derivada3]"
+              endId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Inputs[Entrada de Coluna Derivada]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga de todos os dados na tabela de fato invoices test\Tratar Parque Iguatemi.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Coluna Derivada]"
               endId="Package\Carga de todos os dados na tabela de fato invoices test\Tratar Green Ville.Inputs[Entrada de Coluna Derivada]"
@@ -6681,30 +6759,30 @@
               name="Saída de Coluna Derivada"
               startId="Package\Carga de todos os dados na tabela de fato invoices test\Tratar Green Ville.Outputs[Saída de Coluna Derivada]" />
             <path
-              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Coluna Derivada3]"
+              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Coluna Derivada4]"
               endId="Package\Carga de todos os dados na tabela de fato invoices test\C por order_id.Inputs[Classificar Entrada]"
               name="Saída de Coluna Derivada"
-              startId="Package\Carga de todos os dados na tabela de fato invoices test\Tratar Parque Iguatemi.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB3]"
-              endId="Package\Carga de todos os dados na tabela de fato invoices test\Classificar por order_id 2.Inputs[Classificar Entrada]"
-              name="Saída de Origem OLE DB"
-              startId="Package\Carga de todos os dados na tabela de fato invoices test\Quantidade distinta de produtos.Outputs[Saída de Origem OLE DB]" />
+              startId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB]"
-              endId="Package\Carga de todos os dados na tabela de fato invoices test\C por orderid.Inputs[Classificar Entrada]"
-              name="Saída de Origem OLE DB"
-              startId="Package\Carga de todos os dados na tabela de fato invoices test\Quantidade SKU.Outputs[Saída de Origem OLE DB]" />
-            <path
-              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB1]"
               endId="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada 3.Inputs[Entrada de Coluna Derivada]"
               name="Saída de Origem OLE DB"
               startId="Package\Carga de todos os dados na tabela de fato invoices test\Aquisição dos dados.Outputs[Saída de Origem OLE DB]" />
             <path
-              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB2]"
+              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB1]"
               endId="Package\Carga de todos os dados na tabela de fato invoices test\Classificar per order id.Inputs[Classificar Entrada]"
               name="Saída de Origem OLE DB"
               startId="Package\Carga de todos os dados na tabela de fato invoices test\Volume uc.Outputs[Saída de Origem OLE DB]" />
+            <path
+              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB2]"
+              endId="Package\Carga de todos os dados na tabela de fato invoices test\Classificar por order_id 2.Inputs[Classificar Entrada]"
+              name="Saída de Origem OLE DB"
+              startId="Package\Carga de todos os dados na tabela de fato invoices test\Quantidade distinta de produtos.Outputs[Saída de Origem OLE DB]" />
+            <path
+              refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB3]"
+              endId="Package\Carga de todos os dados na tabela de fato invoices test\C por orderid.Inputs[Classificar Entrada]"
+              name="Saída de Origem OLE DB"
+              startId="Package\Carga de todos os dados na tabela de fato invoices test\Quantidade SKU.Outputs[Saída de Origem OLE DB]" />
             <path
               refId="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB4]"
               endId="Package\Carga de todos os dados na tabela de fato invoices test\Cla por order_id.Inputs[Classificar Entrada]"
@@ -6718,7 +6796,6 @@
       DTS:refId="Package\Carga dim_bottler"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{72C8901E-9271-45BC-BE00-08EE6273B5EC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -7442,7 +7519,6 @@
       DTS:refId="Package\Carga dim_calendar"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{cfb0b5f1-e1f1-4599-932f-035fa465a12a}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -8600,7 +8676,6 @@
       DTS:refId="Package\Carga dim_canal"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{18e5481c-b615-4cf0-8773-231f164d0efd}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -9240,13 +9315,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[REPLACENULL](#{Package\Carga dim_canal\Extração Base de Dados.Outputs[Saída de Origem OLE DB].Columns[gdm_canal]},"Não especificado")</property>
+                          name="Expression">[REPLACENULL](#{Package\Carga dim_canal\Extração Base de Dados.Outputs[Saída de Origem OLE DB].Columns[gdm_canal]},"Not Specified")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACENULL(gdm_canal,"Não especificado")</property>
+                          name="FriendlyExpression">REPLACENULL(gdm_canal,"Not Specified")</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -9317,7 +9392,6 @@
       DTS:refId="Package\Carga dim_consumer"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{22ea1e23-1af1-416b-bf75-a31e28f36289}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -10190,7 +10264,6 @@
       DTS:refId="Package\Carga dim_equipment"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{20b71ecb-62cb-4c51-9f18-639b084c8533}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -10985,7 +11058,6 @@
       DTS:refId="Package\Carga dim_location"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{8c9da0ff-b30b-4a74-897c-5ccf77f20da1}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -11092,6 +11164,81 @@
                           name="SortColumnId">#{Package\Carga dim_location\Cria gdm_location_id.Outputs[Saída de Coluna Derivada].Columns[gdm_location_id]}</property>
                       </properties>
                     </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga dim_location\Coluna Derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Coluna Derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Cria novos valores de coluna aplicando expressões a colunas de entrada da transformação. Crie novas colunas ou substitua as existentes. Por exemplo, concatene os valores das colunas 'first name' e 'last name' para formar uma coluna 'full name'."
+              name="Coluna Derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Carga dim_location\Coluna Derivada.Inputs[Entrada de Coluna Derivada]"
+                  description="Entrada para a Transformação Coluna Derivada"
+                  name="Entrada de Coluna Derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga dim_location\Coluna Derivada.Inputs[Entrada de Coluna Derivada].Columns[gdm_location]"
+                      cachedDataType="wstr"
+                      cachedLength="1020"
+                      cachedName="gdm_location"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Carga dim_location\Extração da Base de Dados.Outputs[Saída de Origem OLE DB].Columns[gdm_location]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">[REPLACE](#{Package\Carga dim_location\Extração da Base de Dados.Outputs[Saída de Origem OLE DB].Columns[gdm_location]},"casa petra","Casa Petra")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(gdm_location,"casa petra","Casa Petra")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga dim_location\Coluna Derivada.Outputs[Saída de Coluna Derivada]"
+                  description="Saída Padrão da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  name="Saída de Coluna Derivada"
+                  synchronousInputId="Package\Carga dim_location\Coluna Derivada.Inputs[Entrada de Coluna Derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga dim_location\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada]"
+                  description="Saída de Erro da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Coluna Derivada"
+                  synchronousInputId="Package\Carga dim_location\Coluna Derivada.Inputs[Entrada de Coluna Derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga dim_location\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga dim_location\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga dim_location\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga dim_location\Coluna Derivada.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -11877,13 +12024,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">#{Package\Carga dim_location\Extração da Base de Dados.Outputs[Saída de Origem OLE DB].Columns[gdm_location]} == "" || [ISNULL](#{Package\Carga dim_location\Extração da Base de Dados.Outputs[Saída de Origem OLE DB].Columns[gdm_location]}) ==  TRUE  ? "Não especificado" : #{Package\Carga dim_location\Extração da Base de Dados.Outputs[Saída de Origem OLE DB].Columns[gdm_location]}</property>
+                          name="Expression">#{Package\Carga dim_location\Extração da Base de Dados.Outputs[Saída de Origem OLE DB].Columns[gdm_location]} == "" || [ISNULL](#{Package\Carga dim_location\Extração da Base de Dados.Outputs[Saída de Origem OLE DB].Columns[gdm_location]}) ==  TRUE  ? "Not Specified" : #{Package\Carga dim_location\Extração da Base de Dados.Outputs[Saída de Origem OLE DB].Columns[gdm_location]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">gdm_location == "" || ISNULL(gdm_location) ==  TRUE  ? "Não especificado" : gdm_location</property>
+                          name="FriendlyExpression">gdm_location == "" || ISNULL(gdm_location) ==  TRUE  ? "Not Specified" : gdm_location</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -12093,14 +12240,19 @@
               startId="Package\Carga dim_location\Tratar Green Ville.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga dim_location.Paths[Saída de Coluna Derivada2]"
-              endId="Package\Carga dim_location\Cria gdm_location_id.Inputs[Entrada de Coluna Derivada]"
-              name="Saída de Coluna Derivada"
-              startId="Package\Carga dim_location\Tratar Parque Iguatemi.Outputs[Saída de Coluna Derivada]" />
-            <path
-              refId="Package\Carga dim_location.Paths[Saída de Coluna Derivada3]"
               endId="Package\Carga dim_location\Tratar Green Ville.Inputs[Entrada de Coluna Derivada]"
               name="Saída de Coluna Derivada"
               startId="Package\Carga dim_location\Tratamento de colunas null.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga dim_location.Paths[Saída de Coluna Derivada3]"
+              endId="Package\Carga dim_location\Coluna Derivada.Inputs[Entrada de Coluna Derivada]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga dim_location\Tratar Parque Iguatemi.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga dim_location.Paths[Saída de Coluna Derivada4]"
+              endId="Package\Carga dim_location\Cria gdm_location_id.Inputs[Entrada de Coluna Derivada]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga dim_location\Coluna Derivada.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga dim_location.Paths[Saída de Origem OLE DB]"
               endId="Package\Carga dim_location\Tratamento de colunas null.Inputs[Entrada de Coluna Derivada]"
@@ -12114,7 +12266,6 @@
       DTS:refId="Package\Carga dim_product (colunas personalizadas)"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{4e4ef3b0-4177-4b11-96bc-47ae0e74e1b1}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -12218,7 +12369,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Inputs[Classificar Entrada].Columns[consum_type]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="50"
                       cachedName="consum_type"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].Columns[consum_type]">
                       <properties>
@@ -12235,7 +12386,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Inputs[Classificar Entrada].Columns[is_returnable]"
                       cachedDataType="wstr"
-                      cachedLength="14"
+                      cachedLength="50"
                       cachedName="is_returnable"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].Columns[is_returnable]">
                       <properties>
@@ -12252,7 +12403,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Inputs[Classificar Entrada].Columns[is_zerosugar]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="50"
                       cachedName="is_zerosugar"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].Columns[is_zerosugar]">
                       <properties>
@@ -12269,7 +12420,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Inputs[Classificar Entrada].Columns[category]"
                       cachedDataType="wstr"
-                      cachedLength="12"
+                      cachedLength="50"
                       cachedName="category"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].Columns[category]">
                       <properties>
@@ -12368,7 +12519,7 @@
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[consum_type]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[consum_type]"
                       name="consum_type">
                       <properties>
@@ -12382,7 +12533,7 @@
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[is_returnable]"
                       dataType="wstr"
-                      length="14"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[is_returnable]"
                       name="is_returnable">
                       <properties>
@@ -12396,7 +12547,7 @@
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[is_zerosugar]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[is_zerosugar]"
                       name="is_zerosugar">
                       <properties>
@@ -12410,7 +12561,7 @@
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[category]"
                       dataType="wstr"
-                      length="12"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[category]"
                       name="category">
                       <properties>
@@ -12581,7 +12732,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].Columns[consum_type]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="50"
                       cachedName="consum_type"
                       externalMetadataColumnId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].ExternalColumns[consum_type]"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[consum_type]"
@@ -12589,7 +12740,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].Columns[is_returnable]"
                       cachedDataType="wstr"
-                      cachedLength="14"
+                      cachedLength="50"
                       cachedName="is_returnable"
                       externalMetadataColumnId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].ExternalColumns[is_returnable]"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[is_returnable]"
@@ -12597,7 +12748,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].Columns[is_zerosugar]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="50"
                       cachedName="is_zerosugar"
                       externalMetadataColumnId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].ExternalColumns[is_zerosugar]"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[is_zerosugar]"
@@ -12605,7 +12756,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].Columns[category]"
                       cachedDataType="wstr"
-                      cachedLength="12"
+                      cachedLength="50"
                       cachedName="category"
                       externalMetadataColumnId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].ExternalColumns[category]"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Classificar por product_id.Outputs[Classificar Saída].Columns[category]"
@@ -12650,22 +12801,22 @@
                     <externalMetadataColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].ExternalColumns[consum_type]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       name="consum_type" />
                     <externalMetadataColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].ExternalColumns[is_returnable]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       name="is_returnable" />
                     <externalMetadataColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].ExternalColumns[is_zerosugar]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       name="is_zerosugar" />
                     <externalMetadataColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].ExternalColumns[category]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       name="category" />
                     <externalMetadataColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Inputs[UpsertDestinationInput].ExternalColumns[volume]"
@@ -12731,25 +12882,25 @@
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[UpsertDestination Error Output].Columns[consum_type]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[UpsertDestination Error Output].Columns[consum_type]"
                       name="consum_type" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[UpsertDestination Error Output].Columns[is_returnable]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[UpsertDestination Error Output].Columns[is_returnable]"
                       name="is_returnable" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[UpsertDestination Error Output].Columns[is_zerosugar]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[UpsertDestination Error Output].Columns[is_zerosugar]"
                       name="is_zerosugar" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[UpsertDestination Error Output].Columns[category]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[UpsertDestination Error Output].Columns[category]"
                       name="category" />
                     <outputColumn
@@ -12790,25 +12941,25 @@
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[New Records Output].Columns[consum_type]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[New Records Output].Columns[consum_type]"
                       name="consum_type" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[New Records Output].Columns[is_returnable]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[New Records Output].Columns[is_returnable]"
                       name="is_returnable" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[New Records Output].Columns[is_zerosugar]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[New Records Output].Columns[is_zerosugar]"
                       name="is_zerosugar" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[New Records Output].Columns[category]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[New Records Output].Columns[category]"
                       name="category" />
                     <outputColumn
@@ -12849,25 +13000,25 @@
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[Updated Records Output].Columns[consum_type]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[Updated Records Output].Columns[consum_type]"
                       name="consum_type" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[Updated Records Output].Columns[is_returnable]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[Updated Records Output].Columns[is_returnable]"
                       name="is_returnable" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[Updated Records Output].Columns[is_zerosugar]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[Updated Records Output].Columns[is_zerosugar]"
                       name="is_zerosugar" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[Updated Records Output].Columns[category]"
                       dataType="wstr"
-                      length="15"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Insere na dim_product.Outputs[Updated Records Output].Columns[category]"
                       name="category" />
                     <outputColumn
@@ -13023,7 +13174,7 @@
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].ExternalColumns[consum_type]"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].Columns[consum_type]"
                       name="consum_type"
                       truncationRowDisposition="FailComponent" />
@@ -13033,7 +13184,7 @@
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].ExternalColumns[is_returnable]"
-                      length="14"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].Columns[is_returnable]"
                       name="is_returnable"
                       truncationRowDisposition="FailComponent" />
@@ -13043,7 +13194,7 @@
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].ExternalColumns[is_zerosugar]"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].Columns[is_zerosugar]"
                       name="is_zerosugar"
                       truncationRowDisposition="FailComponent" />
@@ -13053,7 +13204,7 @@
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].ExternalColumns[category]"
-                      length="12"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].Columns[category]"
                       name="category"
                       truncationRowDisposition="FailComponent" />
@@ -13099,22 +13250,22 @@
                     <externalMetadataColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].ExternalColumns[consum_type]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       name="consum_type" />
                     <externalMetadataColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].ExternalColumns[is_returnable]"
                       dataType="wstr"
-                      length="14"
+                      length="50"
                       name="is_returnable" />
                     <externalMetadataColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].ExternalColumns[is_zerosugar]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       name="is_zerosugar" />
                     <externalMetadataColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Origem OLE DB].ExternalColumns[category]"
                       dataType="wstr"
-                      length="12"
+                      length="50"
                       name="category" />
                   </externalMetadataColumns>
                 </output>
@@ -13170,25 +13321,25 @@
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Erro de Origem OLE DB].Columns[consum_type]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Erro de Origem OLE DB].Columns[consum_type]"
                       name="consum_type" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Erro de Origem OLE DB].Columns[is_returnable]"
                       dataType="wstr"
-                      length="14"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Erro de Origem OLE DB].Columns[is_returnable]"
                       name="is_returnable" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Erro de Origem OLE DB].Columns[is_zerosugar]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Erro de Origem OLE DB].Columns[is_zerosugar]"
                       name="is_zerosugar" />
                     <outputColumn
                       refId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Erro de Origem OLE DB].Columns[category]"
                       dataType="wstr"
-                      length="12"
+                      length="50"
                       lineageId="Package\Carga dim_product (colunas personalizadas)\Origem base_prod.Outputs[Saída de Erro de Origem OLE DB].Columns[category]"
                       name="category" />
                     <outputColumn
@@ -13228,7 +13379,6 @@
       DTS:refId="Package\Carga dim_product (dados principais)"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{85d6337c-1a84-4fb5-b985-f1e0fa3bc907}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -13431,7 +13581,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (dados principais)\Classificar por order_id.Inputs[Classificar Entrada].Columns[is_zerosugar]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="8"
                       cachedName="is_zerosugar"
                       lineageId="Package\Carga dim_product (dados principais)\Colunas Personalizadas.Outputs[Saída de Coluna Derivada].Columns[is_zerosugar]">
                       <properties>
@@ -13448,7 +13598,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (dados principais)\Classificar por order_id.Inputs[Classificar Entrada].Columns[category]"
                       cachedDataType="wstr"
-                      cachedLength="12"
+                      cachedLength="20"
                       cachedName="category"
                       lineageId="Package\Carga dim_product (dados principais)\Colunas Personalizadas.Outputs[Saída de Coluna Derivada].Columns[category]">
                       <properties>
@@ -13612,7 +13762,7 @@
                     <outputColumn
                       refId="Package\Carga dim_product (dados principais)\Classificar por order_id.Outputs[Classificar Saída].Columns[is_zerosugar]"
                       dataType="wstr"
-                      length="10"
+                      length="8"
                       lineageId="Package\Carga dim_product (dados principais)\Classificar por order_id.Outputs[Classificar Saída].Columns[is_zerosugar]"
                       name="is_zerosugar">
                       <properties>
@@ -13626,7 +13776,7 @@
                     <outputColumn
                       refId="Package\Carga dim_product (dados principais)\Classificar por order_id.Outputs[Classificar Saída].Columns[category]"
                       dataType="wstr"
-                      length="12"
+                      length="20"
                       lineageId="Package\Carga dim_product (dados principais)\Classificar por order_id.Outputs[Classificar Saída].Columns[category]"
                       name="category">
                       <properties>
@@ -13675,13 +13825,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[ml]} &gt;= 700 ? "Família" : "Individual"</property>
+                          name="Expression">#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[ml]} &gt;= 700 ? "Family" : "Individual"</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">ml &gt;= 700 ? "Família" : "Individual"</property>
+                          name="FriendlyExpression">ml &gt;= 700 ? "Family" : "Individual"</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -13813,13 +13963,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">"Não retornável"</property>
+                          name="Expression">"Not Returnable"</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">"Não retornável"</property>
+                          name="FriendlyExpression">"Not Returnable"</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -13827,7 +13977,7 @@
                       dataType="wstr"
                       errorOrTruncationOperation="Computação"
                       errorRowDisposition="FailComponent"
-                      length="10"
+                      length="8"
                       lineageId="Package\Carga dim_product (dados principais)\Colunas Personalizadas.Outputs[Saída de Coluna Derivada].Columns[is_zerosugar]"
                       name="is_zerosugar"
                       truncationRowDisposition="FailComponent">
@@ -13836,13 +13986,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">[TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",2) + " " + [TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",3) == "Sem Açúcar" || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",2)) == "Lo" ? "Sem açúcar" : "Normal"</property>
+                          name="Expression">[TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",2) + " " + [TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",3) == "Sem Açúcar" || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",2)) == "Lo" ? "No Sugar" : "Regular"</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">TOKEN(product," ",2) + " " + TOKEN(product," ",3) == "Sem Açúcar" || (TOKEN(product," ",2)) == "Lo" ? "Sem açúcar" : "Normal"</property>
+                          name="FriendlyExpression">TOKEN(product," ",2) + " " + TOKEN(product," ",3) == "Sem Açúcar" || (TOKEN(product," ",2)) == "Lo" ? "No Sugar" : "Regular"</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -13850,7 +14000,7 @@
                       dataType="wstr"
                       errorOrTruncationOperation="Computação"
                       errorRowDisposition="FailComponent"
-                      length="12"
+                      length="20"
                       lineageId="Package\Carga dim_product (dados principais)\Colunas Personalizadas.Outputs[Saída de Coluna Derivada].Columns[category]"
                       name="category"
                       truncationRowDisposition="FailComponent">
@@ -13859,13 +14009,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">(([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Coca-Cola") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Fanta") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Sprite") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Guaraná") ? "Refrigerante" : (([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Agua") ? "Água" : (([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Del") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "NECTAR") ? "Suco" : (([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Monster") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Powerade") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Reign") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "I9") ? "Energético" : "Água Tônica"))))</property>
+                          name="Expression">(([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Coca-Cola") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Fanta") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Sprite") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Guaraná") ? "Sparkling Soft Drink" : (([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Agua") ? "Waters And Hydration" : (([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Del") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "NECTAR") ? "Juices" : (([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Monster") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Powerade") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "Reign") || ([TOKEN](#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[product]}," ",1) == "I9") ? "Waters And Hydration" : "Sparkling Soft Drink"))))</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">((TOKEN(product," ",1) == "Coca-Cola") || (TOKEN(product," ",1) == "Fanta") || (TOKEN(product," ",1) == "Sprite") || (TOKEN(product," ",1) == "Guaraná") ? "Refrigerante" : ((TOKEN(product," ",1) == "Agua") ? "Água" : ((TOKEN(product," ",1) == "Del") || (TOKEN(product," ",1) == "NECTAR") ? "Suco" : ((TOKEN(product," ",1) == "Monster") || (TOKEN(product," ",1) == "Powerade") || (TOKEN(product," ",1) == "Reign") || (TOKEN(product," ",1) == "I9") ? "Energético" : "Água Tônica"))))</property>
+                          name="FriendlyExpression">((TOKEN(product," ",1) == "Coca-Cola") || (TOKEN(product," ",1) == "Fanta") || (TOKEN(product," ",1) == "Sprite") || (TOKEN(product," ",1) == "Guaraná") ? "Sparkling Soft Drink" : ((TOKEN(product," ",1) == "Agua") ? "Waters And Hydration" : ((TOKEN(product," ",1) == "Del") || (TOKEN(product," ",1) == "NECTAR") ? "Juices" : ((TOKEN(product," ",1) == "Monster") || (TOKEN(product," ",1) == "Powerade") || (TOKEN(product," ",1) == "Reign") || (TOKEN(product," ",1) == "I9") ? "Waters And Hydration" : "Sparkling Soft Drink"))))</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -13882,13 +14032,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expressão de Coluna Derivada"
-                          name="Expression">#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[ml]} &gt;= 700 ? "Família" : "Individual"</property>
+                          name="Expression">#{Package\Carga dim_product (dados principais)\Fonte base_dados.Outputs[Saída de Origem OLE DB].Columns[ml]} &gt;= 700 ? "Family" : "Individual"</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expressão Amigável de Coluna Derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">ml &gt;= 700 ? "Família" : "Individual"</property>
+                          name="FriendlyExpression">ml &gt;= 700 ? "Family" : "Individual"</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -14542,7 +14692,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (dados principais)\Insere na base_prod.Inputs[UpsertDestinationInput].Columns[is_zerosugar]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="8"
                       cachedName="is_zerosugar"
                       externalMetadataColumnId="Package\Carga dim_product (dados principais)\Insere na base_prod.Inputs[UpsertDestinationInput].ExternalColumns[is_zerosugar]"
                       lineageId="Package\Carga dim_product (dados principais)\Classificar por order_id.Outputs[Classificar Saída].Columns[is_zerosugar]"
@@ -14550,7 +14700,7 @@
                     <inputColumn
                       refId="Package\Carga dim_product (dados principais)\Insere na base_prod.Inputs[UpsertDestinationInput].Columns[category]"
                       cachedDataType="wstr"
-                      cachedLength="12"
+                      cachedLength="20"
                       cachedName="category"
                       externalMetadataColumnId="Package\Carga dim_product (dados principais)\Insere na base_prod.Inputs[UpsertDestinationInput].ExternalColumns[category]"
                       lineageId="Package\Carga dim_product (dados principais)\Classificar por order_id.Outputs[Classificar Saída].Columns[category]"
@@ -14909,7 +15059,6 @@
       DTS:refId="Package\Correção da Base de Dados"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{d9473838-68c9-4eef-85a4-1e91219eb94a}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -18145,7 +18294,6 @@ where [refTable].[P_order_id] = ?</property>
       DTS:refId="Package\Para cada data, faça"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Contêiner do Loop Foreach"
-      DTS:Disabled="True"
       DTS:DTSID="{dc3fe07c-c32e-4c63-bd88-48c8feadfbe3}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
@@ -18765,6 +18913,32 @@ where [refTable].[P_order_id] = ?</property>
                       refId="Package\Para cada data, faça\Inserção na base_sales\Criar coluna de datekey.Inputs[Entrada de Coluna Derivada]"
                       description="Entrada para a Transformação Coluna Derivada"
                       name="Entrada de Coluna Derivada">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Para cada data, faça\Inserção na base_sales\Criar coluna de datekey.Inputs[Entrada de Coluna Derivada].Columns[P_payment_status]"
+                          cachedDataType="wstr"
+                          cachedLength="16"
+                          cachedName="P_payment_status"
+                          errorOrTruncationOperation="Computação"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Para cada data, faça\Inserção na base_sales\Extraír dados da API.Outputs[JsonSourceOutput].Columns[P_payment_status]"
+                          truncationRowDisposition="FailComponent"
+                          usageType="readWrite">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Expressão de Coluna Derivada"
+                              name="Expression">[REPLACENULL](#{Package\Para cada data, faça\Inserção na base_sales\Extraír dados da API.Outputs[JsonSourceOutput].Columns[P_payment_status]},"NOT_SPECIFIED")</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Expressão Amigável de Coluna Derivada"
+                              expressionType="Notify"
+                              name="FriendlyExpression">REPLACENULL(P_payment_status,"NOT_SPECIFIED")</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
                       <externalMetadataColumns />
                     </input>
                   </inputs>
@@ -20059,7 +20233,6 @@ where [refTable].[P_order_id] = ?</property>
       DTS:refId="Package\Quantidade AuxProd"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{a4d6741f-8afb-4dae-a25d-3c20315df63c}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -20936,7 +21109,6 @@ where [refTable].[P_order_id] = ?</property>
       DTS:refId="Package\Quantidade Produtos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{6501eb6e-acc0-424c-b6e3-3fd9a64a0989}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -21765,7 +21937,6 @@ where [refTable].[P_order_id] = ?</property>
       DTS:refId="Package\Quantidade SKU"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{64c40443-f836-49c8-ae7a-3323d6dc6a8c}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -22294,7 +22465,6 @@ where [refTable].[P_order_id] = ?</property>
       DTS:refId="Package\Selecionar todas as datas"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
-      DTS:Disabled="True"
       DTS:DTSID="{7f447599-677c-43b2-953c-44dab14f15fa}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -22317,7 +22487,6 @@ where [refTable].[P_order_id] = ?</property>
       DTS:refId="Package\Separar por transaction"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{ac1a84ab-e697-4305-b2e2-0339c99e4abe}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -24236,7 +24405,6 @@ where [refTable].[P_order_id] = ?</property>
       DTS:refId="Package\Tarefa Executar SQL"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
-      DTS:Disabled="True"
       DTS:DTSID="{6f8491ff-253b-48ae-b403-bcf3a5bbd8df}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -24247,14 +24415,13 @@ where [refTable].[P_order_id] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F8470752-EDBA-4DA7-B18D-5807BA825864}"
-          SQLTask:SqlStatementSource="delete from base_prod&#xA;delete from base_prod_atualizada&#xA;delete from dim_items&#xA;delete from fact_invoices&#xA;delete from qtd_prod_sku&#xA;delete from qtd_sku&#xA;delete from tbVolumePerUC&#xA;delete from tbVolumeTotal&#xA;delete from qtd_prod_sku&#xA;delete from tb_qtd_prod&#xA;delete from dim_bottler&#xA;delete from dim_calendar&#xA;delete from dim_canal&#xA;delete from dim_consumer&#xA;delete from dim_equipment&#xA;delete from dim_location&#xA;delete from dim_product&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="delete from base_dados&#xA;delete from base_prod&#xA;delete from base_prod_atualizada&#xA;delete from dim_items&#xA;delete from fact_invoices&#xA;delete from qtd_prod_sku&#xA;delete from qtd_sku&#xA;delete from tbVolumePerUC&#xA;delete from tbVolumeTotal&#xA;delete from qtd_prod_sku&#xA;delete from tb_qtd_prod&#xA;delete from dim_bottler&#xA;delete from auxProd_0&#xA;delete from auxProd_1&#xA;delete from dim_consumer&#xA;&#xA;&#xA;delete from dim_product&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Volume Total"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{ec220f3f-cb06-4bb8-bc0c-c22926b66ecf}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -24408,7 +24575,7 @@ where [refTable].[P_order_id] = ?</property>
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].ExternalColumns[consum_type]"
-                      length="10"
+                      length="50"
                       lineageId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].Columns[consum_type]"
                       name="consum_type"
                       truncationRowDisposition="FailComponent" />
@@ -24418,7 +24585,7 @@ where [refTable].[P_order_id] = ?</property>
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].ExternalColumns[is_returnable]"
-                      length="14"
+                      length="50"
                       lineageId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].Columns[is_returnable]"
                       name="is_returnable"
                       truncationRowDisposition="FailComponent" />
@@ -24428,7 +24595,7 @@ where [refTable].[P_order_id] = ?</property>
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].ExternalColumns[is_zerosugar]"
-                      length="10"
+                      length="50"
                       lineageId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].Columns[is_zerosugar]"
                       name="is_zerosugar"
                       truncationRowDisposition="FailComponent" />
@@ -24438,7 +24605,7 @@ where [refTable].[P_order_id] = ?</property>
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].ExternalColumns[category]"
-                      length="12"
+                      length="50"
                       lineageId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].Columns[category]"
                       name="category"
                       truncationRowDisposition="FailComponent" />
@@ -24484,22 +24651,22 @@ where [refTable].[P_order_id] = ?</property>
                     <externalMetadataColumn
                       refId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].ExternalColumns[consum_type]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       name="consum_type" />
                     <externalMetadataColumn
                       refId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].ExternalColumns[is_returnable]"
                       dataType="wstr"
-                      length="14"
+                      length="50"
                       name="is_returnable" />
                     <externalMetadataColumn
                       refId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].ExternalColumns[is_zerosugar]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       name="is_zerosugar" />
                     <externalMetadataColumn
                       refId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Origem OLE DB].ExternalColumns[category]"
                       dataType="wstr"
-                      length="12"
+                      length="50"
                       name="category" />
                   </externalMetadataColumns>
                 </output>
@@ -24555,25 +24722,25 @@ where [refTable].[P_order_id] = ?</property>
                     <outputColumn
                       refId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Erro de Origem OLE DB].Columns[consum_type]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       lineageId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Erro de Origem OLE DB].Columns[consum_type]"
                       name="consum_type" />
                     <outputColumn
                       refId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Erro de Origem OLE DB].Columns[is_returnable]"
                       dataType="wstr"
-                      length="14"
+                      length="50"
                       lineageId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Erro de Origem OLE DB].Columns[is_returnable]"
                       name="is_returnable" />
                     <outputColumn
                       refId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Erro de Origem OLE DB].Columns[is_zerosugar]"
                       dataType="wstr"
-                      length="10"
+                      length="50"
                       lineageId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Erro de Origem OLE DB].Columns[is_zerosugar]"
                       name="is_zerosugar" />
                     <outputColumn
                       refId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Erro de Origem OLE DB].Columns[category]"
                       dataType="wstr"
-                      length="12"
+                      length="50"
                       lineageId="Package\Volume Total\Extração da base de dados.Outputs[Saída de Erro de Origem OLE DB].Columns[category]"
                       name="category" />
                     <outputColumn
@@ -25056,7 +25223,6 @@ where [refTable].[P_order_id] = ?</property>
       DTS:refId="Package\Volume UC"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{02cbd16a-f021-4165-8414-d5b7dd2ce2b9}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -26298,13 +26464,13 @@ where [refTable].[P_order_id] = ?</property>
           Id="Package\Carga da dim_products_test\TF Fact Table Destination"
           TopLeft="227,404" />
         <NodeLayout
-          Size="174,42"
-          Id="Package\Carga da dim_products_test\Aquisição dos dados 1"
-          TopLeft="5.5,5.5" />
-        <NodeLayout
           Size="135,42"
           Id="Package\Carga da dim_products_test\Classificar 1"
           TopLeft="31,114.5" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Carga da dim_products_test\Aquisição dos dados 1"
+          TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package\Carga da dim_products_test.Paths[Saída de Origem OLE DB]"
           TopLeft="95.5,47.5">
@@ -26600,6 +26766,28 @@ where [refTable].[P_order_id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB3]"
+          TopLeft="333.25,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB2]"
           TopLeft="127.125,556.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26621,7 +26809,7 @@ where [refTable].[P_order_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB2]"
+          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB1]"
           TopLeft="94.5000000000001,761.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26655,7 +26843,7 @@ where [refTable].[P_order_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB1]"
+          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB]"
           TopLeft="497,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26668,62 +26856,6 @@ where [refTable].[P_order_id] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Origem OLE DB]"
-          TopLeft="333.25,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Coluna Derivada3]"
-          TopLeft="497,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="50.5000000000001,60"
-              Start="0,0"
-              End="50.5000000000001,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
-                  <mssgle:LineSegment
-                    End="46.5000000000001,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46.5000000000001,30"
-                    Point2="50.5000000000001,30"
-                    Point3="50.5000000000001,34" />
-                  <mssgle:LineSegment
-                    End="50.5000000000001,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26812,62 +26944,6 @@ where [refTable].[P_order_id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem3]"
-          TopLeft="360.75,743.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="8.25,48"
-              Start="0,0"
-              End="8.25,40.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20"
-                    Point2="0,24"
-                    Point3="4,24" />
-                  <mssgle:LineSegment
-                    End="4.25,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.25,24"
-                    Point2="8.25,24"
-                    Point3="8.25,28" />
-                  <mssgle:LineSegment
-                    End="8.25,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem2]"
-          TopLeft="357.75,649.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51.75"
-              Start="0,0"
-              End="0,44.25">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.25" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem1]"
           TopLeft="553.5,560.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26901,7 +26977,7 @@ where [refTable].[P_order_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem]"
+          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem2]"
           TopLeft="391,967">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26926,6 +27002,62 @@ where [refTable].[P_order_id] = ?</property>
                     Point3="-49.4999999999998,33.25" />
                   <mssgle:LineSegment
                     End="-49.4999999999998,51" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem1]"
+          TopLeft="360.75,743.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.25,48"
+              Start="0,0"
+              End="8.25,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="4,24" />
+                  <mssgle:LineSegment
+                    End="4.25,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.25,24"
+                    Point2="8.25,24"
+                    Point3="8.25,28" />
+                  <mssgle:LineSegment
+                    End="8.25,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída da Junção de Mesclagem]"
+          TopLeft="357.75,649.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.75"
+              Start="0,0"
+              End="0,44.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.25" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -27024,6 +27156,78 @@ where [refTable].[P_order_id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Carga de todos os dados na tabela de fato invoices test\Coluna Derivada"
+          TopLeft="206,334" />
+        <EdgeLayout
+          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Coluna Derivada3]"
+          TopLeft="402.5,332.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40.5,22.5"
+              Start="0,0"
+              End="-33,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-16.25,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16.25,0"
+                    Point2="-20.25,0"
+                    Point3="-20.25,4" />
+                  <mssgle:LineSegment
+                    End="-20.25,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20.25,18.5"
+                    Point2="-20.25,22.5"
+                    Point3="-24.25,22.5" />
+                  <mssgle:LineSegment
+                    End="-33,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga de todos os dados na tabela de fato invoices test.Paths[Saída de Coluna Derivada4]"
+          TopLeft="284,376">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="263.5,37.5"
+              Start="0,0"
+              End="263.5,30">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.75"
+                    Point2="0,18.75"
+                    Point3="4,18.75" />
+                  <mssgle:LineSegment
+                    End="259.5,18.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="259.5,18.75"
+                    Point2="263.5,18.75"
+                    Point3="263.5,22.75" />
+                  <mssgle:LineSegment
+                    End="263.5,30" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -27096,7 +27300,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga dim_bottler">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="219,42"
           Id="Package\Carga dim_bottler\Transformar coluna Bottler_id"
@@ -27136,7 +27340,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27158,7 +27364,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27192,7 +27400,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27214,7 +27424,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -27237,11 +27449,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga dim_calendar">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="190,42"
-          Id="Package\Carga dim_calendar\Insere na dim_calendar"
-          TopLeft="223.5,307.5" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="167,42"
           Id="Package\Carga dim_calendar\Separação da data"
@@ -27251,9 +27459,37 @@ where [refTable].[P_order_id] = ?</property>
           Id="Package\Carga dim_calendar\Extração da Base de Dados"
           TopLeft="218,4.5" />
         <NodeLayout
+          Size="190,42"
+          Id="Package\Carga dim_calendar\Insere na dim_calendar"
+          TopLeft="223.5,307.5" />
+        <NodeLayout
           Size="126,42"
           Id="Package\Carga dim_calendar\Classificar"
           TopLeft="258.5,208.5" />
+        <EdgeLayout
+          Id="Package\Carga dim_calendar.Paths[Classificar Saída]"
+          TopLeft="320,250.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga dim_calendar.Paths[Saída de Origem OLE DB]"
           TopLeft="324.25,46.5">
@@ -27273,7 +27509,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27295,29 +27533,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga dim_calendar.Paths[Classificar Saída]"
-          TopLeft="320,250.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -27340,7 +27558,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga dim_canal">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170,42"
           Id="Package\Carga dim_canal\Tratar Linhas Nulas"
@@ -27350,13 +27568,13 @@ where [refTable].[P_order_id] = ?</property>
           Id="Package\Carga dim_canal\Inserir na dim_canal"
           TopLeft="240.5,411.5" />
         <NodeLayout
-          Size="186,42"
-          Id="Package\Carga dim_canal\Classificar por canal_id"
-          TopLeft="238,311.5" />
-        <NodeLayout
           Size="193,42"
           Id="Package\Carga dim_canal\Extração Base de Dados"
           TopLeft="230.5,4.5" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Carga dim_canal\Classificar por canal_id"
+          TopLeft="238,311.5" />
         <NodeLayout
           Size="204,42"
           Id="Package\Carga dim_canal\Criar coluna gdm_canal_id"
@@ -27380,7 +27598,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27402,7 +27622,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27424,7 +27646,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27446,7 +27670,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -27469,11 +27695,15 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga dim_consumer">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="207,42"
           Id="Package\Carga dim_consumer\Extração da Base de Dados"
           TopLeft="208,8.5" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Carga dim_consumer\Insere na dim_consumer"
+          TopLeft="217.5,314.5" />
         <NodeLayout
           Size="198,42"
           Id="Package\Carga dim_consumer\Criar coluna consumer_id"
@@ -27482,10 +27712,6 @@ where [refTable].[P_order_id] = ?</property>
           Size="208,42"
           Id="Package\Carga dim_consumer\Classificar por consumer_id"
           TopLeft="214.5,211.5" />
-        <NodeLayout
-          Size="196,42"
-          Id="Package\Carga dim_consumer\Insere na dim_consumer"
-          TopLeft="217.5,314.5" />
         <EdgeLayout
           Id="Package\Carga dim_consumer.Paths[Saída de Origem OLE DB]"
           TopLeft="311.5,50.5">
@@ -27505,7 +27731,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27527,7 +27755,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27549,7 +27779,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -27572,11 +27804,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga dim_equipment">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="200,42"
-          Id="Package\Carga dim_equipment\Insere na dim_equipment"
-          TopLeft="249.5,228.5" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="207,42"
           Id="Package\Carga dim_equipment\Extração da Base de Dados"
@@ -27585,6 +27813,10 @@ where [refTable].[P_order_id] = ?</property>
           Size="183,42"
           Id="Package\Carga dim_equipment\Classificar por gdm_id"
           TopLeft="255.5,122.5" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Carga dim_equipment\Insere na dim_equipment"
+          TopLeft="249.5,228.5" />
         <EdgeLayout
           Id="Package\Carga dim_equipment.Paths[Saída de Origem OLE DB]"
           TopLeft="344.25,64.5">
@@ -27604,7 +27836,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27626,7 +27860,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -27649,7 +27885,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga dim_location">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="189,42"
           Id="Package\Carga dim_location\Tratar Parque Iguatemi"
@@ -27659,13 +27895,13 @@ where [refTable].[P_order_id] = ?</property>
           Id="Package\Carga dim_location\Tratamento de colunas null"
           TopLeft="207.5,106.5" />
         <NodeLayout
-          Size="207,42"
-          Id="Package\Carga dim_location\Extração da Base de Dados"
-          TopLeft="212,5.5" />
-        <NodeLayout
           Size="187,42"
           Id="Package\Carga dim_location\Insere na dim_location"
           TopLeft="226.5,616.5" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Carga dim_location\Extração da Base de Dados"
+          TopLeft="212,5.5" />
         <NodeLayout
           Size="162,42"
           Id="Package\Carga dim_location\Tratar Green Ville"
@@ -27701,7 +27937,7 @@ where [refTable].[P_order_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga dim_location.Paths[Saída de Coluna Derivada3]"
+          Id="Package\Carga dim_location.Paths[Saída de Coluna Derivada2]"
           TopLeft="313.25,148.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27714,28 +27950,6 @@ where [refTable].[P_order_id] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga dim_location.Paths[Saída de Coluna Derivada2]"
-          TopLeft="315.5,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -27810,6 +28024,80 @@ where [refTable].[P_order_id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Carga dim_location\Coluna Derivada"
+          TopLeft="474,357" />
+        <EdgeLayout
+          Id="Package\Carga dim_location.Paths[Saída de Coluna Derivada3]"
+          TopLeft="410,332.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64,45.5"
+              Start="0,0"
+              End="56.5,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="28,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28,0"
+                    Point2="32,0"
+                    Point3="32,4" />
+                  <mssgle:LineSegment
+                    End="32,41.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32,41.5"
+                    Point2="32,45.5"
+                    Point3="36,45.5" />
+                  <mssgle:LineSegment
+                    End="56.5,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga dim_location.Paths[Saída de Coluna Derivada4]"
+          TopLeft="474,383.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-69.5,50.8333333333333"
+              Start="0,0"
+              End="-62,50.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-25.3302752293578,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-25.3302752293578,0"
+                    Point2="-29.3302752293578,0"
+                    Point3="-29.3302752293578,4" />
+                  <mssgle:LineSegment
+                    End="-29.3302752293578,46.8333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-29.3302752293578,46.8333333333333"
+                    Point2="-29.3302752293578,50.8333333333333"
+                    Point3="-33.3302752293578,50.8333333333333" />
+                  <mssgle:LineSegment
+                    End="-62,50.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-37.3302752293578,-22,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -27830,7 +28118,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga dim_product (colunas personalizadas)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="166,42"
           Id="Package\Carga dim_product (colunas personalizadas)\Origem base_prod"
@@ -27862,7 +28150,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27884,7 +28174,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -27907,7 +28199,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga dim_product (dados principais)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="156,42"
           Id="Package\Carga dim_product (dados principais)\Coluna Derivada"
@@ -27947,7 +28239,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -27969,7 +28263,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28003,7 +28299,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28037,7 +28335,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -28090,6 +28390,42 @@ where [refTable].[P_order_id] = ?</property>
           Id="Package\Correção da Base de Dados\Origem Prod_1"
           TopLeft="237,11.5" />
         <EdgeLayout
+          Id="Package\Correção da Base de Dados.Paths[Saída Sem Correspondência de Pesquisa]"
+          TopLeft="278.833333333333,145.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-127.833333333333,64"
+              Start="0,0"
+              End="-127.833333333333,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.968787515006" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.968787515006"
+                    Point2="0,25.968787515006"
+                    Point3="-4,25.968787515006" />
+                  <mssgle:LineSegment
+                    End="-123.833333333333,25.968787515006" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-123.833333333333,25.968787515006"
+                    Point2="-127.833333333333,25.968787515006"
+                    Point3="-127.833333333333,29.968787515006" />
+                  <mssgle:LineSegment
+                    End="-127.833333333333,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-153.510690104166,30.968787515006,179.188046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Correção da Base de Dados.Paths[Saída de Origem OLE DB]"
           TopLeft="308.5,53.5">
           <EdgeLayout.Curve>
@@ -28108,73 +28444,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Correção da Base de Dados.Paths[Saída de Coluna Derivada]"
-          TopLeft="151.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Correção da Base de Dados.Paths[Classificar Saída1]"
-          TopLeft="524.5,250.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63"
-              Start="0,0"
-              End="0,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Correção da Base de Dados.Paths[Classificar Saída]"
-          TopLeft="149.5,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,61"
-              Start="0,0"
-              End="0,53.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28214,38 +28486,74 @@ where [refTable].[P_order_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Correção da Base de Dados.Paths[Saída Sem Correspondência de Pesquisa]"
-          TopLeft="278.833333333333,145.5">
+          Id="Package\Correção da Base de Dados.Paths[Saída de Coluna Derivada]"
+          TopLeft="151.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-127.833333333333,64"
+              EndConnector="0,60"
               Start="0,0"
-              End="-127.833333333333,56.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.968787515006" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.968787515006"
-                    Point2="0,25.968787515006"
-                    Point3="-4,25.968787515006" />
-                  <mssgle:LineSegment
-                    End="-123.833333333333,25.968787515006" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-123.833333333333,25.968787515006"
-                    Point2="-127.833333333333,25.968787515006"
-                    Point3="-127.833333333333,29.968787515006" />
-                  <mssgle:LineSegment
-                    End="-127.833333333333,56.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-153.510690104167,30.968787515006,179.188046875,12.1953125"
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Correção da Base de Dados.Paths[Classificar Saída1]"
+          TopLeft="524.5,250.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63"
+              Start="0,0"
+              End="0,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Correção da Base de Dados.Paths[Classificar Saída]"
+          TopLeft="149.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61"
+              Start="0,0"
+              End="0,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -28263,7 +28571,7 @@ where [refTable].[P_order_id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q3:int">0</Value>
+          type="q3:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -28271,7 +28579,7 @@ where [refTable].[P_order_id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q4:boolean">false</Value>
+          type="q4:string">false</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -28292,41 +28600,23 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Para cada data, faça\Inserção na base_sales">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Para cada data, faça\Inserção na base_sales\Extraír dados da API"
-          TopLeft="282,9.5" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="190,42"
           Id="Package\Para cada data, faça\Inserção na base_sales\Criar coluna de datekey"
           TopLeft="274.5,111.5" />
-        <EdgeLayout
-          Id="Package\Para cada data, faça\Inserção na base_sales.Paths[JsonSourceOutput]"
-          TopLeft="369.5,51.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Para cada data, faça\Inserção na base_sales\Destino OLE DB"
+          TopLeft="327,281" />
         <NodeLayout
           Size="126,42"
           Id="Package\Para cada data, faça\Inserção na base_sales\Classificar"
           TopLeft="334,190" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Para cada data, faça\Inserção na base_sales\Extraír dados da API"
+          TopLeft="282,9.5" />
         <EdgeLayout
           Id="Package\Para cada data, faça\Inserção na base_sales.Paths[Saída de Coluna Derivada]"
           TopLeft="369.5,153.5">
@@ -28358,13 +28648,35 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="153,42"
-          Id="Package\Para cada data, faça\Inserção na base_sales\Destino OLE DB"
-          TopLeft="327,281" />
+        <EdgeLayout
+          Id="Package\Para cada data, faça\Inserção na base_sales.Paths[JsonSourceOutput]"
+          TopLeft="369.5,51.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Para cada data, faça\Inserção na base_sales.Paths[Classificar Saída]"
           TopLeft="400.25,232">
@@ -28384,25 +28696,40 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Para cada data, faça\Inserção na base_sales\Destino OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Quantidade AuxProd">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="193,42"
-          Id="Package\Quantidade AuxProd\Insere na aux_prod_sku"
-          TopLeft="222.5,212.5" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="206,42"
           Id="Package\Quantidade AuxProd\Extração de base de dados"
           TopLeft="214.5,10.5" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Quantidade AuxProd\Insere na aux_prod_sku"
+          TopLeft="222.5,212.5" />
         <NodeLayout
           Size="129,42"
           Id="Package\Quantidade AuxProd\Agregação"
@@ -28426,7 +28753,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28448,7 +28777,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -28471,41 +28802,19 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Quantidade Produtos">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="191,42"
           Id="Package\Quantidade Produtos\Extração base de dados"
           TopLeft="230.5,8.5" />
         <NodeLayout
-          Size="298,42"
-          Id="Package\Quantidade Produtos\Contagem de produtos diferentes por order_id"
-          TopLeft="175,110.5" />
-        <NodeLayout
           Size="253,42"
           Id="Package\Quantidade Produtos\Inserir na tb_quantidade_prod_order"
           TopLeft="198.5,215.5" />
-        <EdgeLayout
-          Id="Package\Quantidade Produtos.Paths[Saída de Origem OLE DB]"
-          TopLeft="325,50.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="298,42"
+          Id="Package\Quantidade Produtos\Contagem de produtos diferentes por order_id"
+          TopLeft="175,110.5" />
         <EdgeLayout
           Id="Package\Quantidade Produtos.Paths[Saída de Agregação 1]"
           TopLeft="324.5,152.5">
@@ -28525,7 +28834,33 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Quantidade Produtos.Paths[Saída de Origem OLE DB]"
+          TopLeft="325,50.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -28737,7 +29072,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -28760,7 +29097,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Volume Total">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="228,42"
           Id="Package\Volume Total\Soma volume total por order_id"
@@ -28796,7 +29133,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28818,7 +29157,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28840,7 +29181,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -28863,7 +29206,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Volume UC">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="153,42"
           Id="Package\Volume UC\Criar vcalculado"
@@ -28899,7 +29242,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28921,7 +29266,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28943,7 +29290,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -28951,19 +29300,6 @@ where [refTable].[P_order_id] = ?</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Volume UC\Extração da base de dados">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Para cada data, faça\Inserção na base_sales\Destino OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
