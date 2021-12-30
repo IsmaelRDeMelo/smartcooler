@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Carga da base_sales"
   DTS:PackageType="5"
-  DTS:VersionBuild="83"
-  DTS:VersionGUID="{35C0F0EA-EF63-4B63-874C-120AAE7650DA}">
+  DTS:VersionBuild="90"
+  DTS:VersionGUID="{995BA70F-44C9-4393-A98E-952E5D124311}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -7648,6 +7648,40 @@
                           name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Carga dim_calendar\Classificar.Inputs[Classificar Entrada].Columns[month_year]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="month_year"
+                      lineageId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Coluna Derivada].Columns[month_year]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação para os dados de caractere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica a ordem de classificação da coluna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Carga dim_calendar\Classificar.Inputs[Classificar Entrada].Columns[month_year_id]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="month_year_id"
+                      lineageId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Coluna Derivada].Columns[month_year_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica as opções de comparação para os dados de caractere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica a ordem de classificação da coluna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -7735,6 +7769,34 @@
                           dataType="System.Int32"
                           description="Especifica o identificador de linhagem da coluna de entrada associada à coluna de saída."
                           name="SortColumnId">#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[datakey_temp]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Classificar.Outputs[Classificar Saída].Columns[month_year]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Carga dim_calendar\Classificar.Outputs[Classificar Saída].Columns[month_year]"
+                      name="month_year">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica o identificador de linhagem da coluna de entrada associada à coluna de saída."
+                          name="SortColumnId">#{Package\Carga dim_calendar\Month_Year.Outputs[Saída de Coluna Derivada].Columns[month_year]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Classificar.Outputs[Classificar Saída].Columns[month_year_id]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Carga dim_calendar\Classificar.Outputs[Classificar Saída].Columns[month_year_id]"
+                      name="month_year_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica o identificador de linhagem da coluna de entrada associada à coluna de saída."
+                          name="SortColumnId">#{Package\Carga dim_calendar\Month_Year.Outputs[Saída de Coluna Derivada].Columns[month_year_id]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -8286,6 +8348,13 @@
                   truncationRowDisposition="FailComponent">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Inputs[UpsertDestinationInput].Columns[creation]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="creation"
+                      externalMetadataColumnId="Package\Carga dim_calendar\Insere na dim_calendar.Inputs[UpsertDestinationInput].ExternalColumns[creation]"
+                      lineageId="Package\Carga dim_calendar\Classificar.Outputs[Classificar Saída].Columns[creation]"
+                      name="creation" />
+                    <inputColumn
                       refId="Package\Carga dim_calendar\Insere na dim_calendar.Inputs[UpsertDestinationInput].Columns[year]"
                       cachedDataType="i4"
                       cachedName="year"
@@ -8321,6 +8390,22 @@
                       externalMetadataColumnId="Package\Carga dim_calendar\Insere na dim_calendar.Inputs[UpsertDestinationInput].ExternalColumns[datakey]"
                       lineageId="Package\Carga dim_calendar\Classificar.Outputs[Classificar Saída].Columns[datakey_temp]"
                       name="datakey" />
+                    <inputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Inputs[UpsertDestinationInput].Columns[month_year]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="month_year"
+                      externalMetadataColumnId="Package\Carga dim_calendar\Insere na dim_calendar.Inputs[UpsertDestinationInput].ExternalColumns[month_year]"
+                      lineageId="Package\Carga dim_calendar\Classificar.Outputs[Classificar Saída].Columns[month_year]"
+                      name="month_year" />
+                    <inputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Inputs[UpsertDestinationInput].Columns[month_year_id]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="month_year_id"
+                      externalMetadataColumnId="Package\Carga dim_calendar\Insere na dim_calendar.Inputs[UpsertDestinationInput].ExternalColumns[month_year_id]"
+                      lineageId="Package\Carga dim_calendar\Classificar.Outputs[Classificar Saída].Columns[month_year_id]"
+                      name="month_year_id" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -8351,10 +8436,21 @@
                       <properties>
                         <property
                           dataType="System.Boolean"
+                          description="Primary Key Column for this table"
                           expressionType="Notify"
                           name="IsKey">true</property>
                       </properties>
                     </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Inputs[UpsertDestinationInput].ExternalColumns[month_year]"
+                      dataType="wstr"
+                      length="50"
+                      name="month_year" />
+                    <externalMetadataColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Inputs[UpsertDestinationInput].ExternalColumns[month_year_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="month_year_id" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -8390,6 +8486,11 @@
                       lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[UpsertDestination Error Output].Columns[ErrorMessage]"
                       name="ErrorMessage" />
                     <outputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[UpsertDestination Error Output].Columns[creation]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[UpsertDestination Error Output].Columns[creation]"
+                      name="creation" />
+                    <outputColumn
                       refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[UpsertDestination Error Output].Columns[year]"
                       dataType="i4"
                       lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[UpsertDestination Error Output].Columns[year]"
@@ -8414,6 +8515,18 @@
                       dataType="dbTimeStamp"
                       lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[UpsertDestination Error Output].Columns[datakey]"
                       name="datakey" />
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[UpsertDestination Error Output].Columns[month_year]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[UpsertDestination Error Output].Columns[month_year]"
+                      name="month_year" />
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[UpsertDestination Error Output].Columns[month_year_id]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[UpsertDestination Error Output].Columns[month_year_id]"
+                      name="month_year_id" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -8421,6 +8534,11 @@
                   refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[New Records Output]"
                   name="New Records Output">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[New Records Output].Columns[creation]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[New Records Output].Columns[creation]"
+                      name="creation" />
                     <outputColumn
                       refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[New Records Output].Columns[year]"
                       dataType="i4"
@@ -8446,6 +8564,18 @@
                       dataType="dbTimeStamp"
                       lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[New Records Output].Columns[datakey]"
                       name="datakey" />
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[New Records Output].Columns[month_year]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[New Records Output].Columns[month_year]"
+                      name="month_year" />
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[New Records Output].Columns[month_year_id]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[New Records Output].Columns[month_year_id]"
+                      name="month_year_id" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -8453,6 +8583,11 @@
                   refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[Updated Records Output]"
                   name="Updated Records Output">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[Updated Records Output].Columns[creation]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[Updated Records Output].Columns[creation]"
+                      name="creation" />
                     <outputColumn
                       refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[Updated Records Output].Columns[year]"
                       dataType="i4"
@@ -8478,6 +8613,127 @@
                       dataType="dbTimeStamp"
                       lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[Updated Records Output].Columns[datakey]"
                       name="datakey" />
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[Updated Records Output].Columns[month_year]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[Updated Records Output].Columns[month_year]"
+                      name="month_year" />
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[Updated Records Output].Columns[month_year_id]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga dim_calendar\Insere na dim_calendar.Outputs[Updated Records Output].Columns[month_year_id]"
+                      name="month_year_id" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga dim_calendar\Month_Year"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Coluna Derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+              description="Cria novos valores de coluna aplicando expressões a colunas de entrada da transformação. Crie novas colunas ou substitua as existentes. Por exemplo, concatene os valores das colunas 'first name' e 'last name' para formar uma coluna 'full name'."
+              name="Month_Year"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Carga dim_calendar\Month_Year.Inputs[Entrada de Coluna Derivada]"
+                  description="Entrada para a Transformação Coluna Derivada"
+                  name="Entrada de Coluna Derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Carga dim_calendar\Month_Year.Inputs[Entrada de Coluna Derivada].Columns[year]"
+                      cachedDataType="i4"
+                      cachedName="year"
+                      lineageId="Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]" />
+                    <inputColumn
+                      refId="Package\Carga dim_calendar\Month_Year.Inputs[Entrada de Coluna Derivada].Columns[month]"
+                      cachedDataType="i4"
+                      cachedName="month"
+                      lineageId="Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Coluna Derivada]"
+                  description="Saída Padrão da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  name="Saída de Coluna Derivada"
+                  synchronousInputId="Package\Carga dim_calendar\Month_Year.Inputs[Entrada de Coluna Derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Coluna Derivada].Columns[month_year]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Coluna Derivada].Columns[month_year]"
+                      name="month_year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">(#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 1 ? "Jan " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : #{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 2 ? "Fev " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : #{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 3 ? "Mar " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : #{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 4 ? "Abr " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : #{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 5 ? "Mai " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : #{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 6 ? "Jun " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : #{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 7 ? "Jul " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : #{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 8 ? "Ago " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : #{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 9 ? "Set " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : #{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 10 ? "Out " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : #{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 11 ? "Nov " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : #{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]} == 12 ? "Dez " + ((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]}) : "")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(month == 1 ? "Jan " + ((DT_WSTR,4)year) : month == 2 ? "Fev " + ((DT_WSTR,4)year) : month == 3 ? "Mar " + ((DT_WSTR,4)year) : month == 4 ? "Abr " + ((DT_WSTR,4)year) : month == 5 ? "Mai " + ((DT_WSTR,4)year) : month == 6 ? "Jun " + ((DT_WSTR,4)year) : month == 7 ? "Jul " + ((DT_WSTR,4)year) : month == 8 ? "Ago " + ((DT_WSTR,4)year) : month == 9 ? "Set " + ((DT_WSTR,4)year) : month == 10 ? "Out " + ((DT_WSTR,4)year) : month == 11 ? "Nov " + ((DT_WSTR,4)year) : month == 12 ? "Dez " + ((DT_WSTR,4)year) : "")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Coluna Derivada].Columns[month_year_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computação"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Coluna Derivada].Columns[month_year_id]"
+                      name="month_year_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão de Coluna Derivada"
+                          name="Expression">((DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[year]} + (DT_WSTR,4)#{Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada].Columns[month]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expressão Amigável de Coluna Derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">((DT_WSTR,4)year + (DT_WSTR,4)month)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Erro de Coluna Derivada]"
+                  description="Saída de Erro da Transformação Coluna Derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Coluna Derivada"
+                  synchronousInputId="Package\Carga dim_calendar\Month_Year.Inputs[Entrada de Coluna Derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Erro de Coluna Derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -8660,9 +8916,14 @@
               startId="Package\Carga dim_calendar\Classificar.Outputs[Classificar Saída]" />
             <path
               refId="Package\Carga dim_calendar.Paths[Saída de Coluna Derivada]"
-              endId="Package\Carga dim_calendar\Classificar.Inputs[Classificar Entrada]"
+              endId="Package\Carga dim_calendar\Month_Year.Inputs[Entrada de Coluna Derivada]"
               name="Saída de Coluna Derivada"
               startId="Package\Carga dim_calendar\Separação da data.Outputs[Saída de Coluna Derivada]" />
+            <path
+              refId="Package\Carga dim_calendar.Paths[Saída de Coluna Derivada1]"
+              endId="Package\Carga dim_calendar\Classificar.Inputs[Classificar Entrada]"
+              name="Saída de Coluna Derivada"
+              startId="Package\Carga dim_calendar\Month_Year.Outputs[Saída de Coluna Derivada]" />
             <path
               refId="Package\Carga dim_calendar.Paths[Saída de Origem OLE DB]"
               endId="Package\Carga dim_calendar\Separação da data.Inputs[Entrada de Coluna Derivada]"
@@ -26458,7 +26719,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga da dim_products_test">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="199,42"
           Id="Package\Carga da dim_products_test\TF Fact Table Destination"
@@ -26490,7 +26751,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26524,7 +26787,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -27489,47 +27754,27 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga dim_calendar">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="167,42"
           Id="Package\Carga dim_calendar\Separação da data"
           TopLeft="243.5,106.5" />
         <NodeLayout
-          Size="207,42"
-          Id="Package\Carga dim_calendar\Extração da Base de Dados"
-          TopLeft="218,4.5" />
-        <NodeLayout
           Size="190,42"
           Id="Package\Carga dim_calendar\Insere na dim_calendar"
           TopLeft="223.5,307.5" />
         <NodeLayout
+          Size="207,42"
+          Id="Package\Carga dim_calendar\Extração da Base de Dados"
+          TopLeft="218,4.5" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Carga dim_calendar\Month_Year"
+          TopLeft="442,172" />
+        <NodeLayout
           Size="126,42"
           Id="Package\Carga dim_calendar\Classificar"
           TopLeft="258.5,208.5" />
-        <EdgeLayout
-          Id="Package\Carga dim_calendar.Paths[Classificar Saída]"
-          TopLeft="320,250.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga dim_calendar.Paths[Saída de Origem OLE DB]"
           TopLeft="324.25,46.5">
@@ -27549,33 +27794,97 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Carga dim_calendar.Paths[Saída de Coluna Derivada]"
-          TopLeft="324.25,148.5">
+          Id="Package\Carga dim_calendar.Paths[Saída de Coluna Derivada1]"
+          TopLeft="442,193">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="-57.5,36.5"
               Start="0,0"
-              End="0,52.5">
+              End="-50,36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="-24.75,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.75,0"
+                    Point2="-28.75,0"
+                    Point3="-28.75,4" />
+                  <mssgle:LineSegment
+                    End="-28.75,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-28.75,32.5"
+                    Point2="-28.75,36.5"
+                    Point3="-32.75,36.5" />
+                  <mssgle:LineSegment
+                    End="-50,36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga dim_calendar.Paths[Saída de Coluna Derivada]"
+          TopLeft="327,148.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="183,23.5"
+              Start="0,0"
+              End="183,16">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.75"
+                    Point2="0,11.75"
+                    Point3="4,11.75" />
+                  <mssgle:LineSegment
+                    End="179,11.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="179,11.75"
+                    Point2="183,11.75"
+                    Point3="183,15.75" />
+                  <mssgle:LineSegment
+                    End="183,16" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga dim_calendar.Paths[Classificar Saída]"
+          TopLeft="320,250.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -28170,7 +28479,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga dim_product (colunas personalizadas)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="166,42"
           Id="Package\Carga dim_product (colunas personalizadas)\Origem base_prod"
@@ -28202,7 +28511,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28224,7 +28535,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -28247,7 +28560,7 @@ where [refTable].[P_order_id] = ?</property>
     design-time-name="Package\Carga dim_product (dados principais)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="156,42"
           Id="Package\Carga dim_product (dados principais)\Coluna Derivada"
@@ -28287,7 +28600,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28309,7 +28624,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28343,7 +28660,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -28377,7 +28696,9 @@ where [refTable].[P_order_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
