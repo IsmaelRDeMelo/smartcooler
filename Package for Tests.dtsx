@@ -1,0 +1,1757 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/26/2022 1:30:21 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ISMAELRDEMELO"
+  DTS:CreatorName="ISMAELRDEMELO\Ismae"
+  DTS:DTSID="{01D43C17-078E-47F0-A255-547A6E212DCB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package for Tests"
+  DTS:PackageType="5"
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{AA26753B-2AF4-4A4A-8188-CA564EF65136}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-VHO5RP9.machines1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{76A98282-1EA6-4E92-9C43-58C538FE23D1}"
+      DTS:ObjectName="DESKTOP-VHO5RP9.machines1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-VHO5RP9;Initial Catalog=machines;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel 1]"
+      DTS:CreationName="ZS-EXCEL"
+      DTS:DTSID="{B5145319-42BE-4886-A95D-908477E00553}"
+      DTS:ObjectName="Excel 1">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="Path=C:\Users\Ismae\Downloads\21-0701 Diversificacao_20210630_02-07-2021-15-23-19.xlsx;ExcelVersion=Default;OutputBadDateAsNull=False;CreateFileIfMissing=False;RetainSameConnection=False"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A03A0A13-8155-4B1A-BF94-99F8230E6ADB}"
+      DTS:ObjectName="Gerenciador de Conexões de Arquivos Simples">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Ismae\OneDrive\Área de Trabalho\Estudos.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{67FF3D1B-C337-453A-9623-C500351CD1C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Titulo"
+              DTS:DTSID="{41D08E53-DDD2-478E-A401-54326BD62534}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Autore"
+              DTS:DTSID="{229941BA-98C7-4E6F-A21C-7BC83EE2FB52}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="An"
+              DTS:DTSID="{F2B43E7A-888E-4A25-9650-A61D42172932}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nota de Qualidad"
+              DTS:DTSID="{8D442618-2C6D-48D1-81CE-3A32BD90E3A7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{19FB468E-90DC-43AD-8F8F-9D65609C888C}"
+      DTS:ObjectName="Gerenciador de Conexões de Arquivos Simples 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Ismae\OneDrive\Área de Trabalho\Pasta1.CSV">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="75"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Moradores"
+              DTS:DTSID="{B1FF4FFB-C06A-4BFC-A1B8-CFCB8C9E3845}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nota"
+              DTS:DTSID="{6AA74460-17F8-420A-9D5C-AE8F7194171F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nome"
+              DTS:DTSID="{5D9CFFA5-BC20-4C12-82E2-060BBF73F43E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gdm"
+              DTS:DTSID="{B7D673CE-7FB0-4D32-9FAF-25750B75D1B1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões do Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{5D159D70-ED31-4CA3-BB48-07FE11DD1829}"
+      DTS:ObjectName="Gerenciador de Conexões do Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\Ismae\Downloads\21-0701 Diversificacao_20210630_02-07-2021-15-23-19.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ISMAELRDEMELO.machines]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A518576D-FF2C-4FAF-BF31-E3C13BB21603}"
+      DTS:ObjectName="ISMAELRDEMELO.machines">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ISMAELRDEMELO;Initial Catalog=machines;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ISMAELRDEMELO.sales.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5968227C-8997-4D5E-93A1-C8481D86C516}"
+      DTS:ObjectName="ISMAELRDEMELO.sales.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ISMAELRDEMELO;User ID=sa;Initial Catalog=sales;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAa/Rtt2BuxkCeC0wMVi3xxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC4tdgfrcSPUkZqSZwBOd1Yj62Husg2iIH4yn87b6W6FgAAAAAOgAAAAAIAACAAAACukDTFxtrSW1AE84X6GniYhU8g/zOOFKtFizEF8BijpyAAAADkFffdyZyvIlMH+Ep/RLgWCrb/XLIpcAyl8irOfCbURkAAAABX1c6U8JweEN5QenrUyLliEUQiNBVu4K5vTTU1TzVQ+NlcNaTrTBvp+m/MURebPOlpDSU80DtIabN9H6A5SxEB</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PostgreSQL Connection Manager 1]"
+      DTS:CreationName="ZS-POSTGRESQL"
+      DTS:DTSID="{887590B8-66C9-432E-9317-EAF7BEC84A89}"
+      DTS:ObjectName="PostgreSQL Connection Manager 1">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="Host=localhost;Port=5432;UserName=postgres;Database=criteriatest;EnableSsl=False;Application=;Timeout=30;CommandTimeout=0;Pooling=;IntegratedSecurity=False;KerberosServiceName=;IncludeRealm=False;TcpKeepAlive=True;TcpKeepAliveTime=0;TcpKeepAliveInterval=0;ClientEncoding=;Encoding=;RetainSameConnection=False;UseClientCertificate=False;CertificatePath=;CertificateStorageType=CurrentUser;CertificateStoreName=My;CertificateThumbprint="
+          ConnectByProxy="False">
+          <Password
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAa/Rtt2BuxkCeC0wMVi3xxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAARzYGbXXaIhhCIs2S8WwuAjQyb+fMCXClQP3eXmKJOzQAAAAAOgAAAAAIAACAAAAAAUT5CNSKtLaEF0VMafqddQtk13pfUhs8xAFhgYf5w3yAAAADLQVwUfo/N7QYt702t6+DzFTRXElYxIV2wkZQtkQtK0EAAAACvYMELCmgFHwKJUoZldC0yRE0REGs4ecxW6AR386ju2pVpP2Z5cs8uaaRoeQfog2xW+V1rQEKdoL7kALu4Bp17</Password>
+        </ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarefa Fluxo de Dados"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{47484EAD-3878-402A-AE7F-E09E149D6DDB}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarefa Fluxo de Dados"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarefa Fluxo de Dados\Destino OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino OLE DB"
+              name="Destino OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados\Destino OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ISMAELRDEMELO.sales.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[ISMAELRDEMELO.sales.sa]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+                  errorOrTruncationOperation="Inserir"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino OLE DB">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino OLE DB"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarefa Fluxo de Dados\Origem OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
+              description="Origem OLE DB"
+              name="Origem OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowset">[dbo].[fact_equipments]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="O comando SQL a ser executado."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="A variável que contém o comando SQL a ser executado."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica o modo usado para acessar o banco de dados."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Os mapeamentos entre os parâmetros no comando SQL e as variáveis."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ISMAELRDEMELO.sales.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[ISMAELRDEMELO.sales.sa]"
+                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB]"
+                  name="Saída de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[srr_key]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[srr_key]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[srr_key]"
+                      name="srr_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[date]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[date]"
+                      name="date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[gdm_id]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[gdm_id]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[gdm_id]"
+                      name="gdm_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[bottler]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[bottler]"
+                      length="3"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[bottler]"
+                      name="bottler"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[gdm]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[gdm]"
+                      length="36"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[gdm]"
+                      name="gdm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[status]"
+                      length="40"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[status]"
+                      name="status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[gdm_canal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[gdm_canal]"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[gdm_canal]"
+                      name="gdm_canal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[gdm_location]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[gdm_location]"
+                      length="80"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[gdm_location]"
+                      name="gdm_location"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[machine_operator]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[machine_operator]"
+                      length="1020"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[machine_operator]"
+                      name="machine_operator"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[planograma]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[planograma]"
+                      length="1020"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[planograma]"
+                      name="planograma"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[machine_type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[machine_type]"
+                      length="88"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[machine_type]"
+                      name="machine_type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[machine_group]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[machine_group]"
+                      length="68"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[machine_group]"
+                      name="machine_group"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[pricegroup]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[pricegroup]"
+                      length="1020"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[pricegroup]"
+                      name="pricegroup"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[lat]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[lat]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[lat]"
+                      name="lat"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[long]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[long]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[long]"
+                      name="long"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[chip_number]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[chip_number]"
+                      length="112"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[chip_number]"
+                      name="chip_number"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[asset_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[asset_id]"
+                      length="80"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[asset_id]"
+                      name="asset_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[current_status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[current_status]"
+                      length="80"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[current_status]"
+                      name="current_status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[datekey]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[datekey]"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[datekey]"
+                      name="datekey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[tablet]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[tablet]"
+                      length="264"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[tablet]"
+                      name="tablet"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[sd_card]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[sd_card]"
+                      length="264"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[sd_card]"
+                      name="sd_card"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[circuit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[circuit]"
+                      length="264"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[circuit]"
+                      name="circuit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[camera]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[camera]"
+                      length="264"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[camera]"
+                      name="camera"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[equipment_IMEI]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[equipment_IMEI]"
+                      length="136"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[equipment_IMEI]"
+                      name="equipment_IMEI"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[address]"
+                      length="100"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[address]"
+                      name="address"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[zipcode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[zipcode]"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[zipcode]"
+                      name="zipcode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[state]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[state]"
+                      length="30"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[state]"
+                      name="state"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[city]"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[srr_key]"
+                      dataType="i8"
+                      name="srr_key" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[date]"
+                      dataType="dbDate"
+                      name="date" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[gdm_id]"
+                      dataType="i8"
+                      name="gdm_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[bottler]"
+                      dataType="wstr"
+                      length="3"
+                      name="bottler" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[gdm]"
+                      dataType="wstr"
+                      length="36"
+                      name="gdm" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[status]"
+                      dataType="wstr"
+                      length="40"
+                      name="status" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[gdm_canal]"
+                      dataType="wstr"
+                      length="50"
+                      name="gdm_canal" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[gdm_location]"
+                      dataType="wstr"
+                      length="80"
+                      name="gdm_location" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[machine_operator]"
+                      dataType="wstr"
+                      length="1020"
+                      name="machine_operator" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[planograma]"
+                      dataType="wstr"
+                      length="1020"
+                      name="planograma" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[machine_type]"
+                      dataType="wstr"
+                      length="88"
+                      name="machine_type" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[machine_group]"
+                      dataType="wstr"
+                      length="68"
+                      name="machine_group" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[pricegroup]"
+                      dataType="wstr"
+                      length="1020"
+                      name="pricegroup" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[lat]"
+                      dataType="r8"
+                      name="lat" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[long]"
+                      dataType="r8"
+                      name="long" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[chip_number]"
+                      dataType="wstr"
+                      length="112"
+                      name="chip_number" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[asset_id]"
+                      dataType="wstr"
+                      length="80"
+                      name="asset_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[current_status]"
+                      dataType="wstr"
+                      length="80"
+                      name="current_status" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[datekey]"
+                      dataType="wstr"
+                      length="50"
+                      name="datekey" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[tablet]"
+                      dataType="wstr"
+                      length="264"
+                      name="tablet" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[sd_card]"
+                      dataType="wstr"
+                      length="264"
+                      name="sd_card" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[circuit]"
+                      dataType="wstr"
+                      length="264"
+                      name="circuit" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[camera]"
+                      dataType="wstr"
+                      length="264"
+                      name="camera" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[equipment_IMEI]"
+                      dataType="wstr"
+                      length="136"
+                      name="equipment_IMEI" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[address]"
+                      dataType="wstr"
+                      length="100"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[zipcode]"
+                      dataType="wstr"
+                      length="50"
+                      name="zipcode" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[state]"
+                      dataType="wstr"
+                      length="30"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="50"
+                      name="city" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[srr_key]"
+                      dataType="i8"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[srr_key]"
+                      name="srr_key" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[date]"
+                      dataType="dbDate"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[date]"
+                      name="date" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[gdm_id]"
+                      dataType="i8"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[gdm_id]"
+                      name="gdm_id" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[bottler]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[bottler]"
+                      name="bottler" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[gdm]"
+                      dataType="wstr"
+                      length="36"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[gdm]"
+                      name="gdm" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[status]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[status]"
+                      name="status" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[gdm_canal]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[gdm_canal]"
+                      name="gdm_canal" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[gdm_location]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[gdm_location]"
+                      name="gdm_location" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[machine_operator]"
+                      dataType="wstr"
+                      length="1020"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[machine_operator]"
+                      name="machine_operator" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[planograma]"
+                      dataType="wstr"
+                      length="1020"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[planograma]"
+                      name="planograma" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[machine_type]"
+                      dataType="wstr"
+                      length="88"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[machine_type]"
+                      name="machine_type" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[machine_group]"
+                      dataType="wstr"
+                      length="68"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[machine_group]"
+                      name="machine_group" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[pricegroup]"
+                      dataType="wstr"
+                      length="1020"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[pricegroup]"
+                      name="pricegroup" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[lat]"
+                      dataType="r8"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[lat]"
+                      name="lat" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[long]"
+                      dataType="r8"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[long]"
+                      name="long" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[chip_number]"
+                      dataType="wstr"
+                      length="112"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[chip_number]"
+                      name="chip_number" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[asset_id]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[asset_id]"
+                      name="asset_id" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[current_status]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[current_status]"
+                      name="current_status" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[datekey]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[datekey]"
+                      name="datekey" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[tablet]"
+                      dataType="wstr"
+                      length="264"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[tablet]"
+                      name="tablet" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[sd_card]"
+                      dataType="wstr"
+                      length="264"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[sd_card]"
+                      name="sd_card" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[circuit]"
+                      dataType="wstr"
+                      length="264"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[circuit]"
+                      name="circuit" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[camera]"
+                      dataType="wstr"
+                      length="264"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[camera]"
+                      name="camera" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[equipment_IMEI]"
+                      dataType="wstr"
+                      length="136"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[equipment_IMEI]"
+                      name="equipment_IMEI" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[address]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[address]"
+                      name="address" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[zipcode]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[zipcode]"
+                      name="zipcode" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[state]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[state]"
+                      name="state" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[city]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[city]"
+                      name="city" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarefa Fluxo de Dados.Paths[Saída de Origem OLE DB]"
+              endId="Package\Tarefa Fluxo de Dados\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+              name="Saída de Origem OLE DB"
+              startId="Package\Tarefa Fluxo de Dados\Origem OLE DB.Outputs[Saída de Origem OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Test (Import Excel to PostgreSQL)"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:Disabled="True"
+      DTS:DTSID="{235170AB-7D7A-408C-9E0D-6BDE5ACBD190}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Test (Import Excel to PostgreSQL)"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Test (Import Excel to PostgreSQL)\Excel Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Excel Source; ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="Excel Source can be used to read data from Excel files without installing any driver. It supports 32-bit and 64-bit both runtimes."
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  description="Sheet name or named range indicator from which you like to read data. You can use special table name indicators like [$first_sheet$] or [$1$], [$last_sheet$] or [$SomeNumber$]. For named range you can use NamedRange:NAME_FOR_RANGE"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack150.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">Sheet1</property>
+                <property
+                  dataType="System.Int32"
+                  description="AccessMode"
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="ZappySys.Common.Data.SqlDataAccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Query to read data. This option only used when AccessMode=Query"
+                  expressionType="Notify"
+                  name="Query"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT * FROM Sheet1
+
+/* 
+--You can specify various options in WITH Clause. WITH clause is optional. Click on &lt;&lt;View Examples&gt;&gt; to learn more.
+SELECT * FROM [USA-Users] 
+WHERE RowId &lt; 6 
+Order By RowId
+WITH(FormattedColumns='BirthDate|Amount', HeaderLess=false, SkipRows=0, RangeStartCell='A1', RangeEndCell='G500', FormatValues=false )
+*/
+</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Output all columns as per excel formatting"
+                  expressionType="Notify"
+                  name="FormatAllColumns">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Total number of rows which needs to be skipped (After header)"
+                  expressionType="Notify"
+                  name="SkipRows">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Data has no header row to indicate column names"
+                  expressionType="Notify"
+                  name="Headerless">false</property>
+                <property
+                  dataType="System.String"
+                  description="List of column(s) which needs to be formatted according to excel format. Multiple columns must be separated by vertical bar (e.g. BirthDate|Amount|Age) "
+                  expressionType="Notify"
+                  name="FormattedColumns"></property>
+                <property
+                  dataType="System.String"
+                  description="Range start address for data read/write. Address must be excel cell address (e.g. A1)"
+                  expressionType="Notify"
+                  name="RangeStartCell"></property>
+                <property
+                  dataType="System.String"
+                  description="Range end address for data read/write. Address must be excel cell address (e.g. A1)"
+                  expressionType="Notify"
+                  name="RangeEndCell"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Metadata scan mode controls how data type and length is determined. By default few records scanned to determine datatype/length. Changing ScanMode affects length/datatype accuracy."
+                  expressionType="Notify"
+                  name="MetaDataScanMode"
+                  typeConverter="ZappySys.Common.Data.MetaDataScanMode">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Length for all string column. This option is only valid for MetaDataScanMode=Custom"
+                  expressionType="Notify"
+                  name="MetaDataCustomLength">1000</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When this option is true, it detects all string values as DT_STR (Ascii) rather than DT_WSTR (Unicode)"
+                  expressionType="Notify"
+                  name="MetaDataTreatStringAsAscii">false</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.ExcelSource</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Connections[ZS-EXCEL]"
+                  connectionManagerID="Package.ConnectionManagers[Excel 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel 1]"
+                  description="Excel connection for this component"
+                  name="ZS-EXCEL" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ExcelSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Assessor]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Assessor]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Assessor]"
+                      name="Assessor" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Cliente]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Cliente]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Cliente]"
+                      name="Cliente" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Produto]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Produto]"
+                      length="255"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Produto]"
+                      name="Produto" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Sub Produto]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Sub Produto]"
+                      length="255"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Sub Produto]"
+                      name="Sub Produto" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Produto em Garantia]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Produto em Garantia]"
+                      length="255"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Produto em Garantia]"
+                      name="Produto em Garantia" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[CNPJ Fundo]"
+                      dataType="i8"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[CNPJ Fundo]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[CNPJ Fundo]"
+                      name="CNPJ Fundo" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Ativo]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Ativo]"
+                      length="255"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Ativo]"
+                      name="Ativo" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Emissor]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Emissor]"
+                      length="255"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Emissor]"
+                      name="Emissor" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Data de Vencimento]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Data de Vencimento]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Data de Vencimento]"
+                      name="Data de Vencimento" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Quantidade]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Quantidade]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Quantidade]"
+                      name="Quantidade"
+                      precision="19"
+                      scale="8" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[NET]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[NET]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[NET]"
+                      name="NET"
+                      precision="19"
+                      scale="9" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Assessor]"
+                      dataType="i4"
+                      name="Assessor" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Cliente]"
+                      dataType="i4"
+                      name="Cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Produto]"
+                      dataType="wstr"
+                      length="255"
+                      name="Produto" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Sub Produto]"
+                      dataType="wstr"
+                      length="255"
+                      name="Sub Produto" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Produto em Garantia]"
+                      dataType="wstr"
+                      length="255"
+                      name="Produto em Garantia" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[CNPJ Fundo]"
+                      dataType="i8"
+                      name="CNPJ Fundo" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Ativo]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ativo" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Emissor]"
+                      dataType="wstr"
+                      length="255"
+                      name="Emissor" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Data de Vencimento]"
+                      dataType="dbTimeStamp"
+                      name="Data de Vencimento" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Quantidade]"
+                      dataType="numeric"
+                      name="Quantidade"
+                      precision="19"
+                      scale="8" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[NET]"
+                      dataType="numeric"
+                      name="NET"
+                      precision="19"
+                      scale="9" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output]"
+                  isErrorOut="true"
+                  name="ExcelSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Assessor]"
+                      dataType="i4"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Assessor]"
+                      name="Assessor" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Cliente]"
+                      dataType="i4"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Cliente]"
+                      name="Cliente" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Produto]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Produto]"
+                      name="Produto" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Sub Produto]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Sub Produto]"
+                      name="Sub Produto" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Produto em Garantia]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Produto em Garantia]"
+                      name="Produto em Garantia" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[CNPJ Fundo]"
+                      dataType="i8"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[CNPJ Fundo]"
+                      name="CNPJ Fundo" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Ativo]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Ativo]"
+                      name="Ativo" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Emissor]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Emissor]"
+                      name="Emissor" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Data de Vencimento]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Data de Vencimento]"
+                      name="Data de Vencimento" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Quantidade]"
+                      dataType="numeric"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[Quantidade]"
+                      name="Quantidade"
+                      precision="19"
+                      scale="8" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[NET]"
+                      dataType="numeric"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[NET]"
+                      name="NET"
+                      precision="19"
+                      scale="9" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="PostgreSQL Destination; ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="PostgreSQL destination can be used to insert data to PostgreSQL Table."
+              name="PostgreSQL Destination"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  description="Table name. This option only used when AccessMode=Table"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack150.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">"public"."test"</property>
+                <property
+                  dataType="System.Int32"
+                  description="How many rows you want to process in each request."
+                  expressionType="Notify"
+                  name="BatchSize">10000</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.PostgreSqlDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Connections[ZS-POSTGRESQL]"
+                  connectionManagerID="Package.ConnectionManagers[PostgreSQL Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[PostgreSQL Connection Manager 1]"
+                  description="PostgreSQL connection for this component"
+                  name="ZS-POSTGRESQL" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="PostgreSqlDestinationInput"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].Columns[Cliente]"
+                      cachedDataType="i4"
+                      cachedName="Cliente"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[cliente]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Cliente]" />
+                    <inputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].Columns[Produto]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Produto"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[produto]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Produto]" />
+                    <inputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].Columns[Ativo]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Ativo"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[ativo]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Ativo]" />
+                    <inputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].Columns[Emissor]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Emissor"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[emissor]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Emissor]" />
+                    <inputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].Columns[NET]"
+                      cachedDataType="numeric"
+                      cachedName="NET"
+                      cachedPrecision="19"
+                      cachedScale="9"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[net]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[NET]" />
+                    <inputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].Columns[Assessor]"
+                      cachedDataType="i4"
+                      cachedName="Assessor"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[acessor]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Assessor]" />
+                    <inputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].Columns[Sub Produto]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Sub Produto"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[subproduto]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Sub Produto]" />
+                    <inputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].Columns[Produto em Garantia]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Produto em Garantia"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[prodgarantia]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Produto em Garantia]" />
+                    <inputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].Columns[CNPJ Fundo]"
+                      cachedDataType="i8"
+                      cachedName="CNPJ Fundo"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[cnpjfundo]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[CNPJ Fundo]" />
+                    <inputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].Columns[Data de Vencimento]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Data de Vencimento"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[datavencimento]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Data de Vencimento]" />
+                    <inputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].Columns[Quantidade]"
+                      cachedDataType="numeric"
+                      cachedName="Quantidade"
+                      cachedPrecision="19"
+                      cachedScale="8"
+                      externalMetadataColumnId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[qtd]"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput].Columns[Quantidade]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[acessor]"
+                      dataType="wstr"
+                      length="200"
+                      name="acessor" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[cliente]"
+                      dataType="wstr"
+                      length="200"
+                      name="cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[produto]"
+                      dataType="wstr"
+                      length="200"
+                      name="produto" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[subproduto]"
+                      dataType="wstr"
+                      length="200"
+                      name="subproduto" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[prodgarantia]"
+                      dataType="wstr"
+                      length="200"
+                      name="prodgarantia" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[cnpjfundo]"
+                      dataType="wstr"
+                      length="200"
+                      name="cnpjfundo" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[ativo]"
+                      dataType="wstr"
+                      length="200"
+                      name="ativo" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[emissor]"
+                      dataType="wstr"
+                      length="200"
+                      name="emissor" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[datavencimento]"
+                      dataType="wstr"
+                      length="50"
+                      name="datavencimento" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[qtd]"
+                      dataType="wstr"
+                      length="200"
+                      name="qtd" />
+                    <externalMetadataColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput].ExternalColumns[net]"
+                      dataType="wstr"
+                      length="200"
+                      name="net" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Outputs[PostgreSqlDestination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="PostgreSqlDestination Error Output"
+                  synchronousInputId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Outputs[PostgreSqlDestination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Outputs[PostgreSqlDestination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Outputs[PostgreSqlDestination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Outputs[PostgreSqlDestination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Outputs[PostgreSqlDestination Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Outputs[PostgreSqlDestination Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Outputs[PostgreSqlDestination Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Outputs[PostgreSqlDestination Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Test (Import Excel to PostgreSQL).Paths[ExcelSourceOutput]"
+              endId="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination.Inputs[PostgreSqlDestinationInput]"
+              name="ExcelSourceOutput"
+              startId="Package\Test (Import Excel to PostgreSQL)\Excel Source.Outputs[ExcelSourceOutput]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="240,42"
+          Id="Package\Test (Import Excel to PostgreSQL)"
+          TopLeft="202,26" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarefa Fluxo de Dados"
+          TopLeft="233,164" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Test (Import Excel to PostgreSQL)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Test (Import Excel to PostgreSQL)\PostgreSQL Destination"
+          TopLeft="210,157" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Test (Import Excel to PostgreSQL)\Excel Source"
+          TopLeft="244,57" />
+        <EdgeLayout
+          Id="Package\Test (Import Excel to PostgreSQL).Paths[ExcelSourceOutput]"
+          TopLeft="313.5,99">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9,58"
+              Start="0,0"
+              End="-9,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="-4,29" />
+                  <mssgle:LineSegment
+                    End="-5,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5,29"
+                    Point2="-9,29"
+                    Point3="-9,33" />
+                  <mssgle:LineSegment
+                    End="-9,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Tarefa Fluxo de Dados">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Tarefa Fluxo de Dados\Origem OLE DB"
+          TopLeft="231,34" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Tarefa Fluxo de Dados\Destino OLE DB"
+          TopLeft="242,160" />
+        <EdgeLayout
+          Id="Package\Tarefa Fluxo de Dados.Paths[Saída de Origem OLE DB]"
+          TopLeft="307,76">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.5,84"
+              Start="0,0"
+              End="11.5,76.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38"
+                    Point2="0,42"
+                    Point3="4,42" />
+                  <mssgle:LineSegment
+                    End="7.5,42" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.5,42"
+                    Point2="11.5,42"
+                    Point3="11.5,46" />
+                  <mssgle:LineSegment
+                    End="11.5,76.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarefa Fluxo de Dados\Origem OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
